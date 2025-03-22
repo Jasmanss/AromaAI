@@ -11,69 +11,825 @@
         <div class="bg-pattern"></div>
         
         <nav class="header">
-            <div class="logo">AM</div>
-            <div class="nav">
-                <a href="#" class="nav-item">Products</a>
-                <a href="#" class="nav-item">Recipes</a>
-                <a href="#" class="nav-item">Adventure Trip</a>
-                <a href="#" class="nav-item">Food Training</a>
-                <a href="#" class="nav-item">Anna Marta</a>
+            <div class="logo">
+                <svg width="32" height="32" viewBox="0 0 503.607 503.607" fill="white">
+                    <path d="M279.525,176.262l106.572,71.051v-62.657c0-13.883-11.289-25.18-25.18-25.18h-25.18v-25.18
+                        c0-13.883-11.289-25.18-25.18-25.18h-16.787V25.18c0-13.883-11.289-25.18-25.18-25.18h-33.574
+                        c-13.883,0-25.18,11.298-25.18,25.18v83.934h-16.787c-13.883,0-25.18,11.298-25.18,25.18v25.18h-25.18
+                        c-13.883,0-25.18,11.298-25.18,25.18v62.657l106.58-71.051H279.525z M251.802,33.574c4.642,0,8.394,3.752,8.394,8.393
+                        c0,4.642-3.752,8.393-8.394,8.393c-4.633,0-8.393-3.752-8.393-8.393C243.408,37.326,247.168,33.574,251.802,33.574z
+                        M184.654,134.295c0-4.633,3.769-8.393,8.393-8.393h25.18h67.148h25.18c4.633,0,8.393,3.76,8.393,8.393v25.18h-67.114h-0.059
+                        h-67.122V134.295z"/>
+                    <path d="M251.805,177.958L117.51,267.482v119.103l134.295,106.32L386.1,386.585V267.482L251.805,177.958z M218.231,293.77h67.148
+                        c4.633,0,8.393,3.752,8.393,8.393c0,4.642-3.76,8.393-8.393,8.393h-67.148c-4.633,0-8.393-3.752-8.393-8.393
+                        C209.838,297.522,213.598,293.77,218.231,293.77z M310.559,352.525H193.051c-4.633,0-8.393-3.752-8.393-8.393
+                        c0-4.642,3.76-8.393,8.393-8.393h117.508c4.633,0,8.393,3.752,8.393,8.393C318.953,348.773,315.192,352.525,310.559,352.525z"/>
+                    <path d="M360.92,503.607c13.883,0,25.18-11.298,25.18-25.18v-70.438l-120.773,95.618H360.92z"/>
+                    <path d="M117.51,478.426c0,13.883,11.298,25.18,25.18,25.18h95.593L117.51,407.988V478.426z"/>
+                </svg>
+                <span class="logo-text">Aroma AI</span>
             </div>
-            <button class="search-btn">
-                <img src="/images/search.svg" alt="Search" />
-            </button>
+            <div class="nav">
+                <a href="#home" class="nav-item">Home</a>
+                <a href="#image-to-scent" class="nav-item">Image to Scent</a>
+                <a href="#" class="nav-item">Discover</a>
+            </div>
         </nav>
         
-        <section class="hero">
+        <div class="hero">
             <h1>Aroma AI - Find Your Scent</h1>
-            <p>Anna Marta's core philosophy is not just about eating healthy, she says it's equally important that the food be colorful, beautiful and, of course, delicious.</p>
-            <button class="cta-btn">
-                Explore Products
+            <p>Discover the perfect fragrance for you with our AI-powered fragrance finder. Simply answer a few questions and let our algorithm match you with the perfect scent.</p>
+            <button class="cta-btn" onclick="startQuiz(event); return false;">
+                Find Your Scent
                 <span class="arrow">→</span>
             </button>
-        </section>
+        </div>
         
-        <div class="products">
-            <div class="product-card red-card">
-                <div class="product-title">Spice</div>
-                <img src="/images/spice.png" alt="Spice jar" class="product-img">
-                <div class="price-tag">14,69$</div>
-                <p class="product-desc">A richly cherished blend of aromatic spices, offering richness and depth to any dish it graces.</p>
+        <div class="quiz-container">
+            <div class="quiz-progress">
+                <div class="quiz-progress-text">Question 1 of 6</div>
+                <div class="progress-bar">
+                    <div class="progress-bar-fill" style="width: 16.67%"></div>
+                </div>
             </div>
             
-            <div class="product-card green-card">
-                <div class="product-title">Pesto</div>
-                <img src="/images/pesto.png" alt="Pesto jar" class="product-img">
-                <div class="price-tag">28,50$</div>
-                <p class="product-desc">Pesto: beloved for its rich flavor and versatility in pasta, sandwiches, and grilled vegetables.</p>
-                <button class="cart-btn">
-                    <img src="/images/cart.svg" alt="Add to cart" />
-                </button>
+            <div class="questions-container">
+                <!-- Question 1 -->
+                <div class="question" data-question="1">
+                    <div class="question-number">Question 1</div>
+                    <div class="question-text">Preferred Fragrance Type</div>
+                    <div class="options-grid">
+                        <div class="option-card" data-value="masculine">
+                            <div class="option-emoji">👔</div>
+                            <div class="option-text">Masculine</div>
+                        </div>
+                        <div class="option-card" data-value="feminine">
+                            <div class="option-emoji">👗</div>
+                            <div class="option-text">Feminine</div>
+                        </div>
+                        <div class="option-card" data-value="unisex">
+                            <div class="option-emoji">⭐</div>
+                            <div class="option-text">Unisex</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="question hidden" data-question="2">
+                    <div class="question-number">Question 2</div>
+                    <div class="question-text">What is your favorite season?</div>
+                    <div class="options-grid">
+                        <div class="option-card" data-value="spring">
+                            <div class="option-emoji">🌸</div>
+                            <div class="option-text">Spring</div>
+                        </div>
+                        <div class="option-card" data-value="summer">
+                            <div class="option-emoji">☀️</div>
+                            <div class="option-text">Summer</div>
+                        </div>
+                        <div class="option-card" data-value="fall">
+                            <div class="option-emoji">🍂</div>
+                            <div class="option-text">Fall</div>
+                        </div>
+                        <div class="option-card" data-value="winter">
+                            <div class="option-emoji">❄️</div>
+                            <div class="option-text">Winter</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="question hidden" data-question="3">
+                    <div class="question-number">Question 3</div>
+                    <div class="question-text">What is your age range?</div>
+                    <div class="options-grid">
+                        <div class="option-card" data-value="18-24">
+                            <div class="option-emoji">🌱</div>
+                            <div class="option-text">18-24</div>
+                        </div>
+                        <div class="option-card" data-value="25-34">
+                            <div class="option-emoji">🌿</div>
+                            <div class="option-text">25-34</div>
+                        </div>
+                        <div class="option-card" data-value="35-44">
+                            <div class="option-emoji">🌳</div>
+                            <div class="option-text">35-44</div>
+                        </div>
+                        <div class="option-card" data-value="45+">
+                            <div class="option-emoji">🎋</div>
+                            <div class="option-text">45+</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="question hidden" data-question="4">
+                    <div class="question-number">Question 4</div>
+                    <div class="question-text">What scents appeal to you the most?</div>
+                    <div class="question-helper">Select up to 3 options</div>
+                    <div class="options-grid">
+                        <div class="option-card" data-value="floral">
+                            <div class="option-emoji">🌺</div>
+                            <div class="option-text">Floral</div>
+                        </div>
+                        <div class="option-card" data-value="woody">
+                            <div class="option-emoji">🌲</div>
+                            <div class="option-text">Woody</div>
+                        </div>
+                        <div class="option-card" data-value="fresh">
+                            <div class="option-emoji">🌊</div>
+                            <div class="option-text">Fresh</div>
+                        </div>
+                        <div class="option-card" data-value="oriental">
+                            <div class="option-emoji">✨</div>
+                            <div class="option-text">Oriental</div>
+                        </div>
+                        <div class="option-card" data-value="citrus">
+                            <div class="option-emoji">🍊</div>
+                            <div class="option-text">Citrus</div>
+                        </div>
+                        <div class="option-card" data-value="aromatic">
+                            <div class="option-emoji">🌿</div>
+                            <div class="option-text">Aromatic</div>
+                        </div>
+                        <div class="option-card" data-value="spicy">
+                            <div class="option-emoji">🌶️</div>
+                            <div class="option-text">Spicy</div>
+                        </div>
+                        <div class="option-card" data-value="sweet">
+                            <div class="option-emoji">🍯</div>
+                            <div class="option-text">Sweet</div>
+                        </div>
+                        <div class="option-card" data-value="musky">
+                            <div class="option-emoji">🌫️</div>
+                            <div class="option-text">Musky</div>
+                        </div>
+                        <div class="option-card" data-value="powdery">
+                            <div class="option-emoji">💨</div>
+                            <div class="option-text">Powdery</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="question hidden" data-question="5">
+                    <div class="question-number">Question 5</div>
+                    <div class="question-text">What is your preferred fragrance intensity?</div>
+                    <div class="options-grid">
+                        <div class="option-card" data-value="light">
+                            <div class="option-emoji">🌸</div>
+                            <div class="option-text">Light</div>
+                        </div>
+                        <div class="option-card" data-value="moderate">
+                            <div class="option-emoji">💫</div>
+                            <div class="option-text">Moderate</div>
+                        </div>
+                        <div class="option-card" data-value="strong">
+                            <div class="option-emoji">⚡</div>
+                            <div class="option-text">Strong</div>
+                        </div>
+                        <div class="option-card" data-value="intense">
+                            <div class="option-emoji">💥</div>
+                            <div class="option-text">Intense</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="question hidden" data-question="6">
+                    <div class="question-number">Question 6</div>
+                    <div class="question-text">When will you wear this fragrance?</div>
+                    <div class="options-grid">
+                        <div class="option-card" data-value="day">
+                            <div class="option-emoji">☀️</div>
+                            <div class="option-text">Daytime</div>
+                        </div>
+                        <div class="option-card" data-value="night">
+                            <div class="option-emoji">🌙</div>
+                            <div class="option-text">Evening</div>
+                        </div>
+                        <div class="option-card" data-value="special">
+                            <div class="option-emoji">✨</div>
+                            <div class="option-text">Special Occasions</div>
+                        </div>
+                        <div class="option-card" data-value="all">
+                            <div class="option-emoji">🌟</div>
+                            <div class="option-text">All Day</div>
+                        </div>
+                    </div>
+                </div>
             </div>
             
-            <div class="product-card purple-card">
-                <div class="product-title">Salsa</div>
-                <img src="/images/salsa.png" alt="Salsa jar" class="product-img">
-                <div class="favorite">✓</div>
-                <div class="price-tag">14,49$</div>
-                <p class="product-desc">Salsa, a vibrant medley of tomatoes, onions, peppers, and herbs, adds a burst of freshness and spice to dishes.</p>
+            <div class="quiz-navigation">
+                <button class="quiz-btn previous" onclick="previousQuestion()">Previous</button>
+                <button class="quiz-btn continue" onclick="nextQuestion()">Continue</button>
+            </div>
+        </div>
+
+        <!-- Add Loading Animation -->
+        <div class="loading-container">
+            <div class="loading-spinner"></div>
+            <div class="loading-text">Finding your perfect fragrance...</div>
+        </div>
+
+        <div id="products" class="products">
+            <div class="product-container">
+                <div class="product-card red-card">
+                    <div class="product-title">Ralph's Intense</div>
+                    <img src="/images/ralph_intense.png" alt="Ralph's Intense" class="product-img">
+                    <p class="product-desc">An intense and captivating fragrance featuring rich notes of leather, spices, and warm amber.</p>
+                </div>
+                
+                <div class="product-card green-card">
+                    <div class="product-title">Azzaro Wanted</div>
+                    <img src="/images/azzaro_wanted.png" alt="Azzaro Wanted" class="product-img">
+                    <p class="product-desc">A magnetic woody-citrus fragrance with fresh spices, lemon, and tonka bean.</p>
+                </div>
+                
+                <div class="product-card purple-card">
+                    <div class="product-title">Versace Eros</div>
+                    <img src="/images/versace_eros.png" alt="Versace Eros" class="product-img">
+                    <p class="product-desc">A bold masculine fragrance with mint, green apple, and vanilla, embodying passion.</p>
+                </div>
+                
+                <div class="product-card blue-card">
+                    <div class="product-title">Stronger With You</div>
+                    <img src="/images/stronger_with_you_absolute.png" alt="Stronger With You Absolute" class="product-img">
+                    <p class="product-desc">An intense blend of rum, vanilla, and chestnut, creating a warm masculine scent.</p>
+                </div>
+                
+                <div class="product-card cream-card">
+                    <div class="product-title">Valentino Roma</div>
+                    <img src="/images/valentino.png" alt="Valentino Born in Roma" class="product-img">
+                    <p class="product-desc">A modern floral woody fragrance with jasmine and vanilla bourbon notes.</p>
+                </div>
+
+                <div class="product-card red-card">
+                    <div class="product-title">Ralph's Intense</div>
+                    <img src="/images/ralph_intense.png" alt="Ralph's Intense" class="product-img">
+                    <p class="product-desc">An intense and captivating fragrance featuring rich notes of leather, spices, and warm amber.</p>
+                </div>
+                
+                <div class="product-card green-card">
+                    <div class="product-title">Azzaro Wanted</div>
+                    <img src="/images/azzaro_wanted.png" alt="Azzaro Wanted" class="product-img">
+                    <p class="product-desc">A magnetic woody-citrus fragrance with fresh spices, lemon, and tonka bean.</p>
+                </div>
+                
+                <div class="product-card purple-card">
+                    <div class="product-title">Versace Eros</div>
+                    <img src="/images/versace_eros.png" alt="Versace Eros" class="product-img">
+                    <p class="product-desc">A bold masculine fragrance with mint, green apple, and vanilla, embodying passion.</p>
             </div>
             
             <div class="product-card blue-card">
-                <div class="product-title">Oyster</div>
-                <img src="/images/oyster.png" alt="Oyster jar" class="product-img">
-                <div class="stock-label">Out of stock</div>
-                <p class="product-desc">Oysters, prized delicacies of the sea, offer a taste of briny sweetness and a tender texture.</p>
+                    <div class="product-title">Stronger With You</div>
+                    <img src="/images/stronger_with_you_absolute.png" alt="Stronger With You Absolute" class="product-img">
+                    <p class="product-desc">An intense blend of rum, vanilla, and chestnut, creating a warm masculine scent.</p>
+                </div>
+                
+                <div class="product-card cream-card">
+                    <div class="product-title">Valentino Roma</div>
+                    <img src="/images/valentino.png" alt="Valentino Born in Roma" class="product-img">
+                    <p class="product-desc">A modern floral woody fragrance with jasmine and vanilla bourbon notes.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add Featured Product Section -->
+        <div class="featured-product">
+            <div class="featured-content">
+                <div class="section-header">
+                    <h2 class="section-title">Your Perfect Match</h2>
+                    <p class="section-subtitle">Based on your scent preferences, we think you'll love...</p>
+                </div>
+                
+                <div class="recommendation-footer">
+                    <button class="try-again-btn" onclick="startQuiz(event)">
+                        Find Another Scent
+                        <span class="btn-icon">↺</span>
+                    </button>
+                </div>
+                
+                <div class="product-info">
+                    <h2>Lattafa <span>(100ml)</span></h2>
+                    <p class="product-description">
+                        A luxurious and captivating fragrance that combines rich oriental notes with modern sophistication. 
+                        This masterpiece features an intricate blend of precious woods, exotic spices, and warm amber, 
+                        creating an unforgettable signature scent.
+                    </p>
+                    <div class="scent-profile">
+                        <h3>Scent Profile</h3>
+                        <div class="scent-notes">
+                            <div class="note-category">
+                                <span class="note-title">Top Notes</span>
+                                <div class="note-items">
+                                    <span class="note">Bergamot</span>
+                                    <span class="note">Pink Pepper</span>
+                                    <span class="note">Cardamom</span>
+                                </div>
+                            </div>
+                            <div class="note-category">
+                                <span class="note-title">Heart Notes</span>
+                                <div class="note-items">
+                                    <span class="note">Rose</span>
+                                    <span class="note">Orris</span>
+                                    <span class="note">Jasmine</span>
+                                </div>
+                            </div>
+                            <div class="note-category">
+                                <span class="note-title">Base Notes</span>
+                                <div class="note-items">
+                                    <span class="note">Amber</span>
+                                    <span class="note">Vanilla</span>
+                                    <span class="note">Musk</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-showcase">
+                    <img src="/images/lattafa.png" alt="Lattafa Fragrance" class="showcase-img">
+                    <div class="price-tag">149.99$</div>
+                    
+                    <div class="fragrance-stats">
+                        <div class="stat-box">
+                            <div class="stat-circle">
+                                <svg viewBox="0 0 36 36">
+                                    <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="rgba(255, 255, 255, 0.2)" stroke-width="3"/>
+                                    <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#fff" stroke-width="3" stroke-dasharray="68, 100"/>
+                                </svg>
+                                <span class="stat-value">68%</span>
+                            </div>
+                            <span class="stat-label">Sillage</span>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-circle">
+                                <svg viewBox="0 0 36 36">
+                                    <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="rgba(255, 255, 255, 0.2)" stroke-width="3"/>
+                                    <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#fff" stroke-width="3" stroke-dasharray="85, 100"/>
+                                </svg>
+                                <span class="stat-value">8.5h</span>
+                            </div>
+                            <span class="stat-label">Longevity</span>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-circle">
+                                <svg viewBox="0 0 36 36">
+                                    <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="rgba(255, 255, 255, 0.2)" stroke-width="3"/>
+                                    <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#fff" stroke-width="3" stroke-dasharray="75, 100"/>
+                                </svg>
+                                <span class="stat-value">7.5</span>
+                            </div>
+                            <span class="stat-label">Intensity</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add Image to Scent Section -->
+        <div class="image-to-scent">
+            <div class="section-header">
+                <h2 class="section-title">Image to Scent</h2>
+                <p class="section-subtitle">Upload an image or take a photo to discover fragrances that match its mood and aesthetic</p>
             </div>
             
-            <div class="product-card cream-card">
-                <div class="product-title">Tartar</div>
-                <img src="/images/tartar.png" alt="Tartar jar" class="product-img">
-                <p class="product-desc">Tartar sauce, a tangy companion to seafood, delights with its creamy texture and zesty flavor.</p>
+            <div class="upload-container">
+                <div class="upload-options">
+                    <label class="upload-option" for="file-upload">
+                        <div class="option-icon">📁</div>
+                        <span class="option-text">Upload Image</span>
+                        <input type="file" id="file-upload" accept="image/*" style="display: none;">
+                    </label>
+                    
+                    <button class="upload-option" id="camera-capture">
+                        <div class="option-icon">📸</div>
+                        <span class="option-text">Take Photo</span>
+                    </button>
+                </div>
+                
+                <div class="preview-container">
+                    <div class="preview-placeholder" id="preview-placeholder">
+                        <div class="placeholder-icon">🖼️</div>
+                        <p class="placeholder-text">Your image will appear here</p>
+                    </div>
+                    <img id="preview-image" class="preview-image hidden" src="" alt="Preview">
+                    <video id="camera-feed" class="camera-feed hidden" autoplay playsinline></video>
+                    <button id="capture-btn" class="capture-btn hidden">
+                        <span class="capture-icon">📸</span>
+                    </button>
+                    <button id="retry-btn" class="retry-btn hidden">
+                        Try Again
+                        <span class="btn-icon">↺</span>
+                    </button>
+                </div>
             </div>
         </div>
     </main>
 
     <script src="/js/main.js"></script>
+    <script>
+        let currentQuestion = 1;
+        const totalQuestions = 6;
+        let answers = {};
+
+        function startQuiz(event) {
+    if (event) event.preventDefault();
+    console.log("StartQuiz function called");
+    
+    // Reset any existing mode
+    document.body.className = ''; // Clear all classes
+    document.body.classList.add('quiz-mode');
+    
+    // Hide all other sections
+    document.querySelector('.hero').classList.add('hidden');
+    document.querySelector('.products').classList.add('hidden');
+    document.querySelector('.image-to-scent').style.display = 'none';
+    document.querySelector('.featured-product').classList.remove('show');
+    
+    // Reset quiz state
+    currentQuestion = 1;
+    answers = {};
+    
+    // Reset all selections
+    document.querySelectorAll('.option-card').forEach(card => {
+        card.classList.remove('selected');
+    });
+    
+    // Reset and show quiz container
+    const quizContainer = document.querySelector('.quiz-container');
+    // Force complete reset of the container styles
+    quizContainer.removeAttribute('style');
+    quizContainer.style.display = 'block';
+    quizContainer.style.opacity = '0';
+    quizContainer.style.transform = 'translateY(20px)';
+    
+    // Force a reflow
+    void quizContainer.offsetWidth;
+    
+    // Animate in
+    setTimeout(() => {
+        quizContainer.style.opacity = '1';
+        quizContainer.style.transform = 'translateY(0)';
+    }, 10);
+    
+    updateQuizProgress();
+    showCurrentQuestion();
+    
+    // Scroll to top
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+        function showImageToScent(event) {
+            event.preventDefault();
+            
+            // Add image scan mode class to body
+            document.body.classList.add('image-scan-mode');
+            
+            // Hide all main content sections except header
+            document.querySelector('.hero').classList.add('hidden');
+            document.querySelector('.products').classList.add('hidden');
+            document.querySelector('.featured-product').classList.add('hidden');
+            document.querySelector('.quiz-container').classList.add('hidden');
+            
+            // Show image to scent section
+            const imageToScent = document.querySelector('.image-to-scent');
+            imageToScent.style.display = 'block';
+            imageToScent.style.opacity = '1';
+            imageToScent.style.transform = 'translateY(0)';
+            
+            // Optional: Scroll to top smoothly
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        function restoreHomePage(event) {
+    event.preventDefault();
+    
+    // Remove all mode classes from body
+    document.body.classList.remove('quiz-mode', 'image-scan-mode');
+    
+    // Show the hero section and products
+    document.querySelector('.hero').classList.remove('hidden');
+    document.querySelector('.products').classList.remove('hidden');
+    
+    // Reset the quiz container completely
+    const quizContainer = document.querySelector('.quiz-container');
+    quizContainer.style.display = 'none';
+    quizContainer.style.opacity = '0';
+    quizContainer.style.transform = 'translateY(20px)';
+    
+    // Reset the image to scent section
+    const imageToScent = document.querySelector('.image-to-scent');
+    imageToScent.style.display = 'none';
+    imageToScent.style.opacity = '0';
+    imageToScent.style.transform = 'translateY(20px)';
+    
+    // Hide loading container if visible
+    const loadingContainer = document.querySelector('.loading-container');
+    loadingContainer.style.display = 'none';
+    
+    // If featured product is shown, keep it visible
+    const featuredProduct = document.querySelector('.featured-product');
+    if (featuredProduct.classList.contains('show')) {
+        document.body.classList.add('show-featured');
+    }
+    
+    // Reset quiz state
+    currentQuestion = 1;
+    answers = {};
+    
+    // Reset all selections
+    document.querySelectorAll('.option-card').forEach(card => {
+        card.classList.remove('selected');
+    });
+    
+    // Optional: Scroll to top smoothly
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+        function updateQuizProgress() {
+            // Update progress text
+            document.querySelector('.quiz-progress-text').textContent = `Question ${currentQuestion} of ${totalQuestions}`;
+            
+            // Update progress bar
+            const progressPercentage = (currentQuestion / totalQuestions) * 100;
+            document.querySelector('.progress-bar-fill').style.width = `${progressPercentage}%`;
+
+            // Update navigation buttons
+            document.querySelector('.quiz-btn.previous').style.visibility = currentQuestion === 1 ? 'hidden' : 'visible';
+            document.querySelector('.quiz-btn.continue').textContent = currentQuestion === totalQuestions ? 'Finish' : 'Continue';
+        }
+
+        function showCurrentQuestion() {
+            // Hide all questions
+            document.querySelectorAll('.question').forEach(q => q.classList.add('hidden'));
+            
+            // Show current question
+            const currentQuestionElement = document.querySelector(`.question[data-question="${currentQuestion}"]`);
+            currentQuestionElement.classList.remove('hidden');
+
+            // Clear all selections first
+            currentQuestionElement.querySelectorAll('.option-card').forEach(card => {
+                card.classList.remove('selected');
+            });
+
+            // Update selected state if answer exists
+            if (currentQuestion === 4) {
+                // For question 4, handle multiple selections
+                const selectedScents = answers[currentQuestion] || {};
+                currentQuestionElement.querySelectorAll('.option-card').forEach(card => {
+                    if (selectedScents[card.dataset.value]) {
+                        card.classList.add('selected');
+                    }
+                });
+            } else {
+                // For other questions, handle single selection
+                const selectedValue = answers[currentQuestion];
+                if (selectedValue) {
+                    const selectedCard = currentQuestionElement.querySelector(`.option-card[data-value="${selectedValue}"]`);
+                    if (selectedCard) {
+                        selectedCard.classList.add('selected');
+                    }
+                }
+            }
+        }
+
+        function nextQuestion() {
+            // Special handling for question 4 (scents)
+            if (currentQuestion === 4) {
+                const selectedScents = Object.values(answers[currentQuestion] || {});
+                if (!selectedScents.length) {
+                    alert('Please select at least one scent before continuing.');
+                    return;
+                }
+            } else if (!answers[currentQuestion]) {
+                alert('Please select an option before continuing.');
+                return;
+            }
+
+            if (currentQuestion < totalQuestions) {
+                currentQuestion++;
+                updateQuizProgress();
+                showCurrentQuestion();
+            } else {
+                // Handle quiz completion with loading animation
+                handleQuizCompletion();
+            }
+        }
+
+        function handleQuizCompletion() {
+            // Hide the quiz container
+            document.querySelector('.quiz-container').style.opacity = '0';
+            
+            // Show loading animation
+            setTimeout(() => {
+                document.querySelector('.quiz-container').style.display = 'none';
+                const loadingContainer = document.querySelector('.loading-container');
+                loadingContainer.style.display = 'flex';
+                setTimeout(() => {
+                    loadingContainer.classList.add('active');
+                }, 50);
+                
+                // Here you can add your logic to process the answers
+                console.log('Quiz completed!', answers);
+                
+                // Simulate processing time (remove this in production and replace with actual processing)
+                setTimeout(() => {
+                    // Hide loading animation
+                    loadingContainer.classList.remove('active');
+                    setTimeout(() => {
+                        loadingContainer.style.display = 'none';
+                        // Reset quiz container state
+                        const quizContainer = document.querySelector('.quiz-container');
+                        quizContainer.style.display = 'none';
+                        quizContainer.style.opacity = '0';
+                        quizContainer.style.transform = 'translateY(20px)';
+                        
+                        // Remove quiz mode and show featured product
+                        document.body.classList.remove('quiz-mode');
+                        document.body.classList.add('show-featured');
+                        
+                        // Show hero and products sections
+                        document.querySelector('.hero').classList.remove('hidden');
+                        document.querySelector('.products').classList.remove('hidden');
+                        
+                        // Show and animate featured product
+                        const featuredProduct = document.querySelector('.featured-product');
+                        featuredProduct.classList.add('show');
+                        
+                        // Scroll to featured product smoothly
+                        featuredProduct.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        
+                        // Reset quiz state
+                        currentQuestion = 1;
+                        answers = {};
+                    }, 300);
+                }, 3000); // Simulated 3-second processing time
+            }, 300);
+        }
+
+        function previousQuestion() {
+            if (currentQuestion > 1) {
+                currentQuestion--;
+                updateQuizProgress();
+                showCurrentQuestion();
+            }
+        }
+
+        // Add event listeners for option cards
+        document.querySelectorAll('.option-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const questionNumber = parseInt(card.closest('.question').dataset.question);
+                const value = card.dataset.value;
+                
+                // Special handling for question 4 (scents)
+                if (questionNumber === 4) {
+                    // Initialize the scents object if it doesn't exist
+                    if (!answers[questionNumber]) {
+                        answers[questionNumber] = {};
+                    }
+                    
+                    if (card.classList.contains('selected')) {
+                        // If already selected, deselect it
+                        card.classList.remove('selected');
+                        delete answers[questionNumber][value];
+                    } else {
+                        // Check if we already have 3 selections
+                        const currentSelections = Object.keys(answers[questionNumber]).length;
+                        if (currentSelections >= 3) {
+                            // If already at max selections, show message and don't allow new selection
+                            const helperText = document.querySelector('.question-helper');
+                            helperText.textContent = 'Maximum 3 scents selected. Deselect one to change.';
+                            helperText.style.color = '#ff6b6b';
+                            setTimeout(() => {
+                                helperText.textContent = 'Select up to 3 options';
+                                helperText.style.color = '#666';
+                            }, 2000);
+                            return;
+                        } else {
+                            // Add new selection
+                            card.classList.add('selected');
+                            answers[questionNumber][value] = true;
+                        }
+                    }
+                } else {
+                    // For other questions, keep single selection behavior
+                    card.closest('.question').querySelectorAll('.option-card').forEach(c => {
+                        c.classList.remove('selected');
+                    });
+                    card.classList.add('selected');
+                    answers[questionNumber] = value;
+                }
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+    // File upload and camera handlers
+    const fileUpload = document.getElementById('file-upload');
+    const cameraCapture = document.getElementById('camera-capture');
+    const previewPlaceholder = document.getElementById('preview-placeholder');
+    const previewImage = document.getElementById('preview-image');
+    const cameraFeed = document.getElementById('camera-feed');
+    const captureBtn = document.getElementById('capture-btn');
+    const retryBtn = document.getElementById('retry-btn');
+    let stream = null;
+
+    // File Upload Handler
+    fileUpload.addEventListener('change', (e) => {
+        const file = e.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                previewPlaceholder.classList.add('hidden');
+                previewImage.src = e.target.result;
+                previewImage.classList.remove('hidden');
+                retryBtn.classList.remove('hidden');
+                if (stream) {
+                    stopCamera();
+                }
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+
+    // Camera Capture Handler
+    cameraCapture.addEventListener('click', async () => {
+        try {
+            stream = await navigator.mediaDevices.getUserMedia({ video: true });
+            previewPlaceholder.classList.add('hidden');
+            previewImage.classList.add('hidden');
+            cameraFeed.classList.remove('hidden');
+            captureBtn.classList.remove('hidden');
+            cameraFeed.srcObject = stream;
+        } catch (err) {
+            console.error('Error accessing camera:', err);
+            alert('Unable to access camera. Please make sure you have granted camera permissions.');
+        }
+    });
+
+    // Capture Photo Handler
+    captureBtn.addEventListener('click', () => {
+        const canvas = document.createElement('canvas');
+        canvas.width = cameraFeed.videoWidth;
+        canvas.height = cameraFeed.videoHeight;
+        canvas.getContext('2d').drawImage(cameraFeed, 0, 0);
+        previewImage.src = canvas.toDataURL('image/png');
+        previewImage.classList.remove('hidden');
+        cameraFeed.classList.add('hidden');
+        captureBtn.classList.add('hidden');
+        retryBtn.classList.remove('hidden');
+        stopCamera();
+    });
+
+    // Retry Handler
+    retryBtn.addEventListener('click', () => {
+        previewImage.classList.add('hidden');
+        previewPlaceholder.classList.remove('hidden');
+        retryBtn.classList.add('hidden');
+        previewImage.src = '';
+    });
+
+    // Helper function to stop camera stream
+    function stopCamera() {
+        if (stream) {
+            stream.getTracks().forEach(track => track.stop());
+            stream = null;
+        }
+        cameraFeed.srcObject = null;
+        cameraFeed.classList.add('hidden');
+        captureBtn.classList.add('hidden');
+    }
+
+    // Add event listeners for navigation
+    document.querySelector('a[href="#home"]').addEventListener('click', restoreHomePage);
+    document.querySelector('a[href="#image-to-scent"]').addEventListener('click', showImageToScent);
+    document.querySelector('a[href="#"]').addEventListener('click', (e) => e.preventDefault());
+    
+    // Make sure the Find Your Scent button always works
+    const findScentBtn = document.querySelector('.cta-btn');
+    if (findScentBtn) {
+        findScentBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            startQuiz(e); //okay
+        });
+    }
+});
+
+        // Add event listeners for navigation
+        document.querySelector('a[href="#home"]').addEventListener('click', restoreHomePage);
+        document.querySelector('a[href="#image-to-scent"]').addEventListener('click', showImageToScent);
+        document.querySelector('a[href="#"]').addEventListener('click', (e) => e.preventDefault());
+    </script>
 </body>
 </html>
