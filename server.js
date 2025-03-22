@@ -1,11 +1,21 @@
 const express = require('express');
 const path = require('path');
+const cors = require('cors');
+const bodyParser = require('body-parser');
+
 const app = express();
 
-// Serve static files from the public directory
+// Middleware
+app.use(cors());
+app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Handle all routes by serving index.html
+// Basic test route
+app.get('/api/test', (req, res) => {
+    res.json({ message: 'Server is working!' });
+});
+
+// Handle all other routes by serving index.html
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
