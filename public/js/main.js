@@ -49,7 +49,68 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
+    
+    // Filter functionality - automatic filtering on checkbox change
+    const filterCheckboxes = document.querySelectorAll('.filter-checkbox');
+    if (filterCheckboxes.length > 0) {
+        filterCheckboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                // Get all checked filter values
+                const checkedFilters = Array.from(document.querySelectorAll('.filter-checkbox:checked')).map(cb => {
+                    return {
+                        id: cb.id,
+                        value: cb.value || cb.id
+                    };
+                });
+                
+                console.log('Active filters:', checkedFilters);
+                
+                // In a real app, you would use these values to filter the products
+                // This would automatically filter as the user checks/unchecks options
+                applyFilters(checkedFilters);
+            });
+        });
+    }
+    
+    // Add event listeners for fragrance item hover effects
+    const fragranceItems = document.querySelectorAll('.fragrance-item');
+    if (fragranceItems.length > 0) {
+        fragranceItems.forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+                this.style.boxShadow = '0 10px 20px rgba(0, 0, 0, 0.1)';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = 'none';
+            });
+        });
+    }
 });
+
+// Function to apply filters (placeholder)
+function applyFilters(activeFilters) {
+    // This is a placeholder function that would be implemented in a real app
+    // to filter the fragrance items based on the active filters
+    console.log('Applying filters:', activeFilters);
+    
+    // Example implementation:
+    const fragranceItems = document.querySelectorAll('.fragrance-item');
+    
+    if (activeFilters.length === 0) {
+        // If no filters are active, show all items
+        fragranceItems.forEach(item => {
+            item.style.display = 'block';
+        });
+        return;
+    }
+    
+    // Otherwise, in a real implementation, you would:
+    // 1. Check each item against the active filters
+    // 2. Show/hide items based on whether they match the filters
+    // 3. Update the display accordingly
+}
 
 // Function to create decorative pattern SVG
 function createPatternSVG() {
@@ -64,6 +125,48 @@ function createPatternSVG() {
         <path d="M0,100 Q400,150 800,100 T1600,150" stroke="white" fill="none" opacity="0.1" stroke-width="2" />
         <path d="M0,200 Q400,250 800,200 T1600,250" stroke="white" fill="none" opacity="0.1" stroke-width="2" />
     </svg>`;
+}
+
+// Page navigation functions
+function showDiscover(event) {
+    if (event) event.preventDefault();
+    console.log("showDiscover function called");
+    
+    // Reset any existing mode
+    document.body.className = '';
+    
+    // Add discover mode class to body
+    document.body.classList.add('discover-mode');
+    
+    // Hide all other sections
+    document.querySelector('.hero').classList.add('hidden');
+    document.querySelector('.products').classList.add('hidden');
+    document.querySelector('.featured-product').classList.add('hidden');
+    document.querySelector('.quiz-container').classList.add('hidden');
+    document.querySelector('.image-to-scent').classList.add('hidden');
+    document.querySelector('.loading-container').style.display = 'none';
+    
+    // Show discover section
+    const discoverSection = document.querySelector('.discover-section');
+    discoverSection.style.opacity = '0';
+    discoverSection.style.transform = 'translateY(20px)';
+    discoverSection.style.display = 'block';
+    discoverSection.classList.remove('hidden');
+    
+    // Force a reflow
+    void discoverSection.offsetWidth;
+    
+    // Animate in
+    setTimeout(() => {
+        discoverSection.style.opacity = '1';
+        discoverSection.style.transform = 'translateY(0)';
+    }, 50);
+    
+    // Scroll to top
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
 }
 
 // Simulate a shopping cart functionality
