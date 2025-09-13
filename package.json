@@ -43,10 +43,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Jasman047/AromaAI.git"
+    "url": "git+https://github.com/Jasmanss/AromaAI.git"
   },
   "bugs": {
-    "url": "https://github.com/Jasman047/AromaAI/issues"
+    "url": "https://github.com/Jasmanss/AromaAI/issues"
   },
-  "homepage": "https://jasman047.github.io/AromaAI"
+  "homepage": "https://jasmanss.github.io/AromaAI"
 }
