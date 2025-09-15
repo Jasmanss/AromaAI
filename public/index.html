@@ -2430,11 +2430,13 @@ if (fragrance.link) {
             const captureBtn = document.getElementById('capture-btn');
             const submitBtn = document.getElementById('submit-btn');
             let stream = null;
+            let currentImageFile = null;
 
             // File Upload Handler
             fileUpload.addEventListener('change', (e) => {
                 const file = e.target.files[0];
                 if (file) {
+                    currentImageFile = file; // Store the file
                     const reader = new FileReader();
                     reader.onload = (e) => {
                         previewPlaceholder.classList.add('hidden');
@@ -2470,6 +2472,12 @@ if (fragrance.link) {
                 canvas.width = cameraFeed.videoWidth;
                 canvas.height = cameraFeed.videoHeight;
                 canvas.getContext('2d').drawImage(cameraFeed, 0, 0);
+                
+                // Convert canvas to blob and create a file
+                canvas.toBlob((blob) => {
+                    currentImageFile = new File([blob], 'camera-capture.png', { type: 'image/png' });
+                }, 'image/png');
+                
                 previewImage.src = canvas.toDataURL('image/png');
                 previewImage.classList.remove('hidden');
                 cameraFeed.classList.add('hidden');
@@ -2480,7 +2488,7 @@ if (fragrance.link) {
 
             // submit Handler
             submitBtn.addEventListener('click', function () {
-    if (!imageFile) {
+    if (!currentImageFile) {
         alert("Please select or capture an image first.");
         return;
     }
@@ -2495,7 +2503,7 @@ if (fragrance.link) {
     // Simulate processing time
     setTimeout(() => {
         // Simple client-side image analysis
-        const recommendations = getImageBasedRecommendations(imageFile);
+        const recommendations = getImageBasedRecommendations(currentImageFile);
         
         // Hide loader with animation
         hideLoader();
