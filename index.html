@@ -1933,7 +1933,7 @@ function displayImageResults(data) {
 }
 
 // Client-side image-based recommendation function
-function getImageBasedRecommendations(imageFile) {
+function getImageBasedRecommendations(currentImageFile) {
     // Sample fragrance data for image-based recommendations
     const fragrances = [
         {
@@ -1994,7 +1994,7 @@ function getImageBasedRecommendations(imageFile) {
 
     // Simple image analysis based on file name and size
     // In a real implementation, you would analyze the actual image content
-    const fileName = imageFile.name.toLowerCase();
+    const fileName = currentImageFile.name.toLowerCase();
     let recommendedScents = ['Fresh', 'Citrus', 'Natural'];
     
     // Basic heuristics based on filename
