@@ -1543,7 +1543,7 @@
 </div>
     </main>
 
-    <script src="/js/main.js"></script>
+    <script src="./js/main.js"></script>
     <script>
         let currentQuestion = 1;
         const totalQuestions = 6;
@@ -1797,32 +1797,24 @@ function handleQuizCompletion() {
     console.log('===============================================');
     
     // Send answers to backend for processing
-    fetch('/api/quiz-recommend', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(answers)
-    })
-    .then(response => {
-        console.log('Server response status:', response.status);
-        return response.json();
-    })
-    .then(data => {
-        console.log('=============== SERVER RESPONSE ===============');
-        console.log('Recommendations received from server:');
-        console.log(data);
+    // Client-side recommendation logic (no server needed)
+    console.log('=============== CLIENT-SIDE PROCESSING ===============');
+    console.log('Processing quiz answers locally...');
+    
+    // Simulate processing time
+    setTimeout(() => {
+        const recommendations = getClientSideRecommendations(answers);
         
-        // Log each recommended fragrance in detail
-        if (data.recommendations && data.recommendations.length > 0) {
-            console.log('Number of recommendations:', data.recommendations.length);
-            data.recommendations.forEach((fragrance, index) => {
+        console.log('=============== CLIENT-SIDE RESPONSE ===============');
+        console.log('Recommendations generated locally:');
+        console.log(recommendations);
+        
+        if (recommendations && recommendations.length > 0) {
+            console.log('Number of recommendations:', recommendations.length);
+            recommendations.forEach((fragrance, index) => {
                 console.log(`Recommendation ${index + 1}:`, fragrance.name, 'by', fragrance.brand);
                 console.log(`Scents:`, fragrance.scents);
                 console.log(`Sex:`, fragrance.sex);
-                if (fragrance.notes) {
-                    console.log(`Notes:`, fragrance.notes);
-                }
             });
             
             // Calculate how long to wait to ensure minimum loading time
@@ -1839,7 +1831,7 @@ function handleQuizCompletion() {
                     loadingContainer.style.display = 'none';
                     
                     // Update the featured product section with the first recommendation
-                    updateFeaturedProduct(data.recommendations[0], data.reasonsForRecommendation);
+                    updateFeaturedProduct(recommendations[0], { source: 'client-side' });
                     
                     // Show the featured product section
                     document.body.className = '';
@@ -1862,18 +1854,189 @@ function handleQuizCompletion() {
                 }, 300);  // Fade-out transition time
             }, remainingTime);
         } else {
-            console.log('No recommendations received');
+            console.log('No recommendations generated');
             loadingContainer.style.display = 'none';
             alert('Sorry, we could not find any recommendations. Please try again with different preferences.');
             restoreHomePage({ preventDefault: () => {} });
         }
         console.log('===============================================');
-    })
-    .catch(error => {
-        console.error('Error sending quiz data or getting recommendations:', error);
-        loadingContainer.style.display = 'none';
-        alert('Sorry, there was an error getting your fragrance recommendations. Please try again.');
-        restoreHomePage({ preventDefault: () => {} });
+    }, 1000); // Simulate processing time
+}
+
+// Client-side recommendation function
+function getClientSideRecommendations(answers) {
+    // Sample fragrance data (subset for client-side)
+    const fragrances = [
+        {
+            "id": "001",
+            "name": "Sauvage",
+            "brand": "Dior",
+            "description": "A bold and sophisticated fragrance with a powerful blend of fresh spicy notes and warm amber.",
+            "scents": ["Fresh spicy", "Amber", "Citrus", "Aromatic", "Musky", "Woody", "Lavender", "Herbal", "Warm spicy"],
+            "notes": {
+                "top": ["Calabrian bergamot", "Sichuan pepper"],
+                "heart": ["Lavender", "Pink pepper", "Vetiver"],
+                "base": ["Ambroxan", "Patchouli"]
+            },
+            "sex": "Male",
+            "age_range": "25-45",
+            "season": "All Seasons",
+            "intensity": "Strong",
+            "occasion": "All Day",
+            "image": "./images/dior_sauvage_collection.png"
+        },
+        {
+            "id": "002",
+            "name": "Bleu de Chanel",
+            "brand": "Chanel",
+            "description": "A timeless and elegant woody aromatic fragrance with refreshing citrus and a sophisticated amber base.",
+            "scents": ["Citrus", "Fresh spicy", "Woody", "Aromatic", "Amber", "Smoky", "Balsamic", "Warm spicy", "Green", "Fresh"],
+            "notes": {
+                "top": ["Grapefruit", "Lemon", "Mint", "Pink pepper"],
+                "heart": ["Ginger", "Jasmine", "Nutmeg", "Iso E Super"],
+                "base": ["Sandalwood", "Cedarwood", "Amber", "Incense", "Musk"]
+            },
+            "sex": "Male",
+            "age_range": "25-50",
+            "season": "All Seasons",
+            "intensity": "Moderate",
+            "occasion": "All Day",
+            "image": "./images/bleu_de_chanel_collection.png"
+        },
+        {
+            "id": "003",
+            "name": "Acqua di Giò",
+            "brand": "Giorgio Armani",
+            "description": "A fresh aquatic fragrance inspired by the Mediterranean Sea with vibrant citrus and marine notes.",
+            "scents": ["Citrus", "Aromatic", "Marine", "Fresh spicy", "Floral", "Woody", "Fresh"],
+            "notes": {
+                "top": ["Jasmine", "Lemon", "Lime", "Orange", "Bergamot"],
+                "heart": ["Rosemary", "Nutmeg", "Mignonette", "Persimmon"],
+                "base": ["Patchouli", "White musk", "Oakmoss", "Cedarwood"]
+            },
+            "sex": "Male",
+            "age_range": "20-40",
+            "season": "Summer",
+            "intensity": "Moderate",
+            "occasion": "All Day",
+            "image": "./images/acqua_di_gio_collection.png"
+        },
+        {
+            "id": "004",
+            "name": "La Belle",
+            "brand": "Jean Paul Gaultier",
+            "description": "A gourmand fragrance with vanilla, pear, and woody notes creating a sweet and sensual experience.",
+            "scents": ["Vanilla", "Fruity", "Sweet", "Powdery", "Aquatic", "Aromatic", "Woody", "Amber", "Fresh", "Floral"],
+            "notes": {
+                "top": ["Pear", "Bergamot"],
+                "heart": ["Rose", "Jasmine"],
+                "base": ["Vanilla", "Amber", "Sandalwood"]
+            },
+            "sex": "Female",
+            "age_range": "18-35",
+            "season": "All Seasons",
+            "intensity": "Moderate",
+            "occasion": "All Day",
+            "image": "./images/la_belle_collection.png"
+        },
+        {
+            "id": "005",
+            "name": "Good Girl Blush",
+            "brand": "Carolina Herrera",
+            "description": "A floral fragrance with rose, jasmine, and vanilla creating a feminine and elegant scent.",
+            "scents": ["Floral", "Vanilla", "Citrus", "Fresh", "Sweet", "Yellow floral", "Rose", "Woody", "Fresh spicy", "Aromatic"],
+            "notes": {
+                "top": ["Pink pepper", "Bergamot"],
+                "heart": ["Rose", "Jasmine", "Tuberose"],
+                "base": ["Vanilla", "Sandalwood", "Amber"]
+            },
+            "sex": "Female",
+            "age_range": "20-40",
+            "season": "All Seasons",
+            "intensity": "Moderate",
+            "occasion": "All Day",
+            "image": "./images/good_girl_blush_collection.png"
+        }
+    ];
+
+    // Map answers to search criteria
+    const sexMapping = {
+        'masculine': 'Male',
+        'feminine': 'Female',
+        'unisex': 'Unisex'
+    };
+    const sex = sexMapping[answers[1]] || 'Unisex';
+    
+    // Get preferred scents
+    const scentMapping = {
+        'floral': 'Floral',
+        'woody': 'Woody',
+        'fresh': 'Fresh',
+        'oriental': 'Vanilla',
+        'citrus': 'Citrus',
+        'aromatic': 'Aromatic',
+        'spicy': 'Spicy',
+        'sweet': 'Sweet',
+        'musky': 'Musky',
+        'powdery': 'Powdery'
+    };
+    
+    const preferredScents = answers[4] || {};
+    const selectedScents = Object.keys(preferredScents).map(scent => scentMapping[scent] || scent);
+    
+    // Filter and score fragrances
+    let scoredFragrances = fragrances.map(frag => {
+        let score = 0;
+        
+        // Score by sex (highest priority)
+        if (frag.sex === sex) {
+            score += 10;
+        } else if (frag.sex === 'Unisex' || sex === 'Unisex') {
+            score += 5;
+        }
+        
+        // Score by scent preferences
+        const scentMatches = selectedScents.filter(scent => 
+            frag.scents.some(fragScent => 
+                fragScent.toLowerCase().includes(scent.toLowerCase())
+            )
+        );
+        
+        if (scentMatches.length > 0) {
+            score += scentMatches.length * 8;
+        }
+        
+        // Season preference
+        const season = answers[2];
+        if (season) {
+            const seasonalScents = {
+                'spring': ['Floral', 'Fresh', 'Citrus', 'Green'],
+                'summer': ['Citrus', 'Fresh', 'Aquatic', 'Light'],
+                'fall': ['Woody', 'Spicy', 'Amber', 'Warm'],
+                'winter': ['Woody', 'Sweet', 'Vanilla', 'Spicy', 'Musky']
+            };
+            
+            const seasonalMatch = seasonalScents[season]?.filter(scent => 
+                frag.scents.some(fragScent => 
+                    fragScent.toLowerCase().includes(scent.toLowerCase())
+                )
+            ) || [];
+            
+            score += seasonalMatch.length * 4;
+        }
+        
+        return { ...frag, score };
+    });
+    
+    // Filter out zero scores and sort by score
+    scoredFragrances = scoredFragrances
+        .filter(frag => frag.score > 0)
+        .sort((a, b) => b.score - a.score);
+    
+    // Return top 3 matches
+    return scoredFragrances.slice(0, 3).map(frag => {
+        const { score, ...fragrance } = frag;
+        return fragrance;
     });
 }
 
