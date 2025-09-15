@@ -1876,13 +1876,19 @@ function handleQuizCompletion() {
 
 // Function to display image-based recommendation results
 function displayImageResults(data) {
+    console.log('displayImageResults called with data:', data);
     const scentResults = document.getElementById('scent-results');
+    console.log('scent-results element:', scentResults);
     
     if (!data.recommendations || data.recommendations.length === 0) {
+        console.log('No recommendations found');
         scentResults.innerHTML = '<p>No recommendations found for this image.</p>';
         scentResults.classList.remove('hidden');
+        scentResults.classList.add('fade-in');
         return;
     }
+    
+    console.log('Found recommendations:', data.recommendations.length);
     
     // Create HTML for the results
     let resultsHtml = '<div class="image-results">';
@@ -1926,8 +1932,11 @@ function displayImageResults(data) {
     
     resultsHtml += '</div>';
     
+    console.log('Setting innerHTML and removing hidden class');
     scentResults.innerHTML = resultsHtml;
     scentResults.classList.remove('hidden');
+    scentResults.classList.add('fade-in');
+    console.log('Results should now be visible');
     
     // Scroll to results
     setTimeout(() => {
