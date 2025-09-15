@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aroma AI</title>
-    <link rel="stylesheet" href="./css/style.css?v=2">
-    <script src="./js/image_upload.js?v=2"></script>
+    <link rel="stylesheet" href="./css/style.css?v=3">
+    <script src="./js/image_upload.js?v=3"></script>
 </head>
 <body>
     <main>
@@ -1543,7 +1543,7 @@
 </div>
     </main>
 
-    <script src="./js/main.js?v=2"></script>
+    <script src="./js/main.js?v=3"></script>
     <script>
         let currentQuestion = 1;
         const totalQuestions = 6;
@@ -1831,7 +1831,15 @@ function handleQuizCompletion() {
                     loadingContainer.style.display = 'none';
                     
                     // Update the featured product section with the first recommendation
-                    updateFeaturedProduct(recommendations[0], { source: 'client-side' });
+                    const reasonsData = {
+                        gender: answers['1'] === 'masculine' ? 'Male' : answers['1'] === 'feminine' ? 'Female' : 'Unisex',
+                        scents: Object.keys(answers['4']).filter(key => answers['4'][key]),
+                        season: answers['2'],
+                        intensity: answers['5'],
+                        occasion: answers['6'],
+                        source: 'client-side'
+                    };
+                    updateFeaturedProduct(recommendations[0], reasonsData);
                     
                     // Show the featured product section
                     document.body.className = '';
@@ -1861,6 +1869,67 @@ function handleQuizCompletion() {
         }
         console.log('===============================================');
     }, 1000); // Simulate processing time
+}
+
+// Function to display image-based recommendation results
+function displayImageResults(data) {
+    const scentResults = document.getElementById('scent-results');
+    
+    if (!data.recommendations || data.recommendations.length === 0) {
+        scentResults.innerHTML = '<p>No recommendations found for this image.</p>';
+        scentResults.classList.remove('hidden');
+        return;
+    }
+    
+    // Create HTML for the results
+    let resultsHtml = '<div class="image-results">';
+    resultsHtml += '<h3>Based on your image, we recommend:</h3>';
+    
+    // Show the first recommendation prominently
+    const topRecommendation = data.recommendations[0];
+    resultsHtml += '<div class="top-recommendation">';
+    resultsHtml += `<h4>${topRecommendation.name} by ${topRecommendation.brand}</h4>`;
+    resultsHtml += `<p>${topRecommendation.description}</p>`;
+    
+    // Add recommendation reasons
+    resultsHtml += '<div class="recommendation-reasons">';
+    resultsHtml += '<h5>Why we recommend this:</h5>';
+    resultsHtml += '<ul>';
+    resultsHtml += '<li>Perfect match for the fresh, natural elements in your image</li>';
+    resultsHtml += '<li>Contains citrus and fresh notes that complement outdoor settings</li>';
+    resultsHtml += '<li>Ideal for casual, everyday wear</li>';
+    resultsHtml += '</ul>';
+    resultsHtml += '</div>';
+    
+    resultsHtml += '</div>';
+    
+    // Show other recommendations
+    if (data.recommendations.length > 1) {
+        resultsHtml += '<div class="other-recommendations">';
+        resultsHtml += '<h4>Other great options:</h4>';
+        resultsHtml += '<div class="recommendation-grid">';
+        
+        for (let i = 1; i < Math.min(data.recommendations.length, 4); i++) {
+            const rec = data.recommendations[i];
+            resultsHtml += '<div class="recommendation-item">';
+            resultsHtml += `<h5>${rec.name} by ${rec.brand}</h5>`;
+            resultsHtml += `<p>${rec.description}</p>`;
+            resultsHtml += '</div>';
+        }
+        
+        resultsHtml += '</div>';
+        resultsHtml += '</div>';
+    }
+    
+    resultsHtml += '</div>';
+    
+    scentResults.innerHTML = resultsHtml;
+    scentResults.classList.remove('hidden');
+    
+    // Scroll to results
+    setTimeout(() => {
+        scentResults.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 100);
 }
 
 // Client-side image-based recommendation function
@@ -2435,7 +2504,7 @@ if (fragrance.link) {
         console.log("Fragrance data generated locally:", recommendations);
 
         // Display results with animation
-        displayResults({
+        displayImageResults({
             predicted_scents: ['Fresh', 'Citrus', 'Natural'],
             recommendations: recommendations,
             image_analysis: {
@@ -2446,8 +2515,8 @@ if (fragrance.link) {
         });
     }, 2000); // Simulate processing time
     
-    // Reset button state
-    submitBtn.disabled = false;
+        // Reset button state
+        submitBtn.disabled = false;
 });
 
             // Helper function to stop camera stream
