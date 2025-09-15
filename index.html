@@ -1874,7 +1874,7 @@ function handleQuizCompletion() {
     }, 1000); // Simulate processing time
 }
 
-// Function to display image-based recommendation results
+// Function to display image-based recommendation results (restored original design)
 function displayImageResults(data) {
     console.log('displayImageResults called with data:', data);
     const scentResults = document.getElementById('scent-results');
@@ -1887,64 +1887,59 @@ function displayImageResults(data) {
         scentResults.classList.add('fade-in');
         scentResults.style.display = 'block';
         scentResults.style.opacity = '1';
-        scentResults.style.transform = 'translateY(0)';
         return;
     }
     
     console.log('Found recommendations:', data.recommendations.length);
     
-    // Create HTML for the results
-    let resultsHtml = '<div class="image-results" style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); margin: 20px 0; border: 2px solid #2c5f5d;">';
-    resultsHtml += '<h3 style="color: #2c5f5d; margin-bottom: 15px; font-size: 24px;">🌸 Based on your image, we recommend:</h3>';
-    
-    // Show the first recommendation prominently
-    const topRecommendation = data.recommendations[0];
-    resultsHtml += '<div class="top-recommendation" style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin-bottom: 15px;">';
-    resultsHtml += `<h4 style="color: #2c5f5d; margin-bottom: 10px; font-size: 20px;">✨ ${topRecommendation.name} by ${topRecommendation.brand}</h4>`;
-    resultsHtml += `<p style="color: #333; line-height: 1.6; margin-bottom: 10px;">${topRecommendation.description}</p>`;
-    
-    // Add recommendation reasons
-    resultsHtml += '<div class="recommendation-reasons">';
-    resultsHtml += '<h5>Why we recommend this:</h5>';
-    resultsHtml += '<ul>';
-    resultsHtml += '<li>Perfect match for the fresh, natural elements in your image</li>';
-    resultsHtml += '<li>Contains citrus and fresh notes that complement outdoor settings</li>';
-    resultsHtml += '<li>Ideal for casual, everyday wear</li>';
-    resultsHtml += '</ul>';
-    resultsHtml += '</div>';
-    
-    resultsHtml += '</div>';
-    
-    // Show other recommendations
-    if (data.recommendations.length > 1) {
-        resultsHtml += '<div class="other-recommendations">';
-        resultsHtml += '<h4>Other great options:</h4>';
-        resultsHtml += '<div class="recommendation-grid">';
+    // Create the original design with predicted scents and fragrance recommendations
+    let resultsHtml = `
+        <div class="predicted-scents">
+            <h3>Detected Scents</h3>
+            <div class="scent-tags">
+                ${data.predicted_scents.map(scent => `<span class="scent-tag">${scent}</span>`).join('')}
+            </div>
+        </div>
         
-        for (let i = 1; i < Math.min(data.recommendations.length, 4); i++) {
-            const rec = data.recommendations[i];
-            resultsHtml += '<div class="recommendation-item">';
-            resultsHtml += `<h5>${rec.name} by ${rec.brand}</h5>`;
-            resultsHtml += `<p>${rec.description}</p>`;
-            resultsHtml += '</div>';
-        }
-        
-        resultsHtml += '</div>';
-        resultsHtml += '</div>';
-    }
+        <div class="fragrance-recommendations">
+            <h3>Recommended Fragrances</h3>
+            <div class="recommendation-grid">`;
     
-    resultsHtml += '</div>';
+    // Add all recommendations with images
+    data.recommendations.forEach((fragrance, index) => {
+        resultsHtml += `
+            <div class="recommendation-card">
+                <div class="fragrance-image">
+                    <img src="${fragrance.image || './images/default-fragrance.png'}" alt="${fragrance.name}" onerror="this.src='./images/pattern.svg'">
+                </div>
+                <div class="fragrance-info">
+                    <h4>${fragrance.name}</h4>
+                    <p class="brand">${fragrance.brand}</p>
+                    <p class="description">${fragrance.description}</p>
+                    <div class="match-score">
+                        <span class="score-label">Match Score:</span>
+                        <div class="score-bar">
+                            <div class="score-fill" style="width: ${Math.max(70, 95 - index * 10)}%"></div>
+                        </div>
+                        <span class="score-value">${Math.max(70, 95 - index * 10)}%</span>
+                    </div>
+                    ${fragrance.link ? `<a href="${fragrance.link}" target="_blank" class="view-product">View Product</a>` : ''}
+                </div>
+            </div>`;
+    });
     
-    console.log('Setting innerHTML and removing hidden class');
+    resultsHtml += `
+            </div>
+        </div>`;
+    
+    console.log('Setting innerHTML with original design');
     scentResults.innerHTML = resultsHtml;
     scentResults.classList.remove('hidden');
     scentResults.classList.add('fade-in');
     scentResults.style.display = 'block';
     scentResults.style.opacity = '1';
     scentResults.style.transform = 'translateY(0)';
-    scentResults.style.visibility = 'visible';
-    scentResults.style.zIndex = '1000';
-    console.log('Results should now be visible');
+    console.log('Original design results should now be visible');
     
     // Scroll to results
     setTimeout(() => {
