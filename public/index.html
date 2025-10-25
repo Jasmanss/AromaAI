@@ -1557,6 +1557,19 @@
                 const response = await fetch('/api/fragrances');
                 if (response.ok) {
                     fragrancesData = await response.json();
+                    
+                    // Fix image paths for GitHub Pages compatibility
+                    // Convert absolute paths (/images/) to relative paths (./images/)
+                    fragrancesData = fragrancesData.map(frag => {
+                        if (frag.image && frag.image.startsWith('/images/')) {
+                            return {
+                                ...frag,
+                                image: '.' + frag.image
+                            };
+                        }
+                        return frag;
+                    });
+                    
                     window.fragrancesData = fragrancesData;
                     console.log(`Loaded ${fragrancesData.length} fragrances from JSON file`);
                 } else {
