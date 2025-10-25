@@ -1554,10 +1554,23 @@
         // Function to load fragrances data
         async function loadFragrancesData() {
             try {
-                const response = await fetch('/api/fragrances');
-                if (response.ok) {
-                    fragrancesData = await response.json();
+                // Try to load from API first (for local development)
+                let response = await fetch('/api/fragrances');
+                
+                // If API fails, try loading from static JSON file (for GitHub Pages)
+                if (!response.ok) {
+                    console.log('API not available, loading from static JSON file...');
+                    response = await fetch('./data/fragrances.json');
                     
+                    if (response.ok) {
+                        const data = await response.json();
+                        fragrancesData = data.fragrances; // Extract fragrances array from JSON
+                    }
+                } else {
+                    fragrancesData = await response.json();
+                }
+                
+                if (fragrancesData && fragrancesData.length > 0) {
                     // Fix image paths for GitHub Pages compatibility
                     // Convert absolute paths (/images/) to relative paths (./images/)
                     fragrancesData = fragrancesData.map(frag => {
@@ -1571,12 +1584,37 @@
                     });
                     
                     window.fragrancesData = fragrancesData;
-                    console.log(`Loaded ${fragrancesData.length} fragrances from JSON file`);
+                    console.log(`✅ Loaded ${fragrancesData.length} fragrances from JSON file`);
                 } else {
-                    console.error('Failed to load fragrances data');
+                    console.error('❌ No fragrance data loaded');
                 }
             } catch (error) {
-                console.error('Error loading fragrances data:', error);
+                console.error('❌ Error loading fragrances data:', error);
+                
+                // Try one more time with the static file
+                try {
+                    const response = await fetch('./data/fragrances.json');
+                    if (response.ok) {
+                        const data = await response.json();
+                        fragrancesData = data.fragrances;
+                        
+                        // Fix image paths
+                        fragrancesData = fragrancesData.map(frag => {
+                            if (frag.image && frag.image.startsWith('/images/')) {
+                                return {
+                                    ...frag,
+                                    image: '.' + frag.image
+                                };
+                            }
+                            return frag;
+                        });
+                        
+                        window.fragrancesData = fragrancesData;
+                        console.log(`✅ Loaded ${fragrancesData.length} fragrances from static file (fallback)`);
+                    }
+                } catch (fallbackError) {
+                    console.error('❌ Fallback loading also failed:', fallbackError);
+                }
             }
         }
         
