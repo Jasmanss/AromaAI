@@ -1548,6 +1548,29 @@
 
     <script src="./js/main.js?v=5"></script>
     <script>
+        // Load fragrances data from JSON file
+        let fragrancesData = [];
+        
+        // Function to load fragrances data
+        async function loadFragrancesData() {
+            try {
+                const response = await fetch('/api/fragrances');
+                if (response.ok) {
+                    fragrancesData = await response.json();
+                    window.fragrancesData = fragrancesData;
+                    console.log(`Loaded ${fragrancesData.length} fragrances from JSON file`);
+                } else {
+                    console.error('Failed to load fragrances data');
+                }
+            } catch (error) {
+                console.error('Error loading fragrances data:', error);
+            }
+        }
+        
+        // Load fragrances data when page loads
+        document.addEventListener('DOMContentLoaded', loadFragrancesData);
+    </script>
+    <script>
         let currentQuestion = 1;
         const totalQuestions = 6;
         let answers = {};
@@ -2046,99 +2069,25 @@ function getImageBasedRecommendations(currentImageFile) {
 
 // Client-side recommendation function
 function getClientSideRecommendations(answers) {
-    // Sample fragrance data (subset for client-side)
-    const fragrances = [
-        {
-            "id": "001",
-            "name": "Sauvage",
-            "brand": "Dior",
-            "description": "A bold and sophisticated fragrance with a powerful blend of fresh spicy notes and warm amber.",
-            "scents": ["Fresh spicy", "Amber", "Citrus", "Aromatic", "Musky", "Woody", "Lavender", "Herbal", "Warm spicy"],
-            "notes": {
-                "top": ["Calabrian bergamot", "Sichuan pepper"],
-                "heart": ["Lavender", "Pink pepper", "Vetiver"],
-                "base": ["Ambroxan", "Patchouli"]
-            },
-            "sex": "Male",
-            "age_range": "25-45",
-            "season": "All Seasons",
-            "intensity": "Strong",
-            "occasion": "All Day",
-            "image": "./images/dior_sauvage_collection.png"
-        },
-        {
-            "id": "002",
-            "name": "Bleu de Chanel",
-            "brand": "Chanel",
-            "description": "A timeless and elegant woody aromatic fragrance with refreshing citrus and a sophisticated amber base.",
-            "scents": ["Citrus", "Fresh spicy", "Woody", "Aromatic", "Amber", "Smoky", "Balsamic", "Warm spicy", "Green", "Fresh"],
-            "notes": {
-                "top": ["Grapefruit", "Lemon", "Mint", "Pink pepper"],
-                "heart": ["Ginger", "Jasmine", "Nutmeg", "Iso E Super"],
-                "base": ["Sandalwood", "Cedarwood", "Amber", "Incense", "Musk"]
-            },
-            "sex": "Male",
-            "age_range": "25-50",
-            "season": "All Seasons",
-            "intensity": "Moderate",
-            "occasion": "All Day",
-            "image": "./images/bleu_de_chanel_collection.png"
-        },
-        {
-            "id": "003",
-            "name": "Acqua di Giò",
-            "brand": "Giorgio Armani",
-            "description": "A fresh aquatic fragrance inspired by the Mediterranean Sea with vibrant citrus and marine notes.",
-            "scents": ["Citrus", "Aromatic", "Marine", "Fresh spicy", "Floral", "Woody", "Fresh"],
-            "notes": {
-                "top": ["Jasmine", "Lemon", "Lime", "Orange", "Bergamot"],
-                "heart": ["Rosemary", "Nutmeg", "Mignonette", "Persimmon"],
-                "base": ["Patchouli", "White musk", "Oakmoss", "Cedarwood"]
-            },
-            "sex": "Male",
-            "age_range": "20-40",
-            "season": "Summer",
-            "intensity": "Moderate",
-            "occasion": "All Day",
-            "image": "./images/acqua_di_gio_collection.png"
-        },
-        {
-            "id": "004",
-            "name": "La Belle",
-            "brand": "Jean Paul Gaultier",
-            "description": "A gourmand fragrance with vanilla, pear, and woody notes creating a sweet and sensual experience.",
-            "scents": ["Vanilla", "Fruity", "Sweet", "Powdery", "Aquatic", "Aromatic", "Woody", "Amber", "Fresh", "Floral"],
-            "notes": {
-                "top": ["Pear", "Bergamot"],
-                "heart": ["Rose", "Jasmine"],
-                "base": ["Vanilla", "Amber", "Sandalwood"]
-            },
-            "sex": "Female",
-            "age_range": "18-35",
-            "season": "All Seasons",
-            "intensity": "Moderate",
-            "occasion": "All Day",
-            "image": "./images/la_belle_collection.png"
-        },
-        {
-            "id": "005",
-            "name": "Good Girl Blush",
-            "brand": "Carolina Herrera",
-            "description": "A floral fragrance with rose, jasmine, and vanilla creating a feminine and elegant scent.",
-            "scents": ["Floral", "Vanilla", "Citrus", "Fresh", "Sweet", "Yellow floral", "Rose", "Woody", "Fresh spicy", "Aromatic"],
-            "notes": {
-                "top": ["Pink pepper", "Bergamot"],
-                "heart": ["Rose", "Jasmine", "Tuberose"],
-                "base": ["Vanilla", "Sandalwood", "Amber"]
-            },
-            "sex": "Female",
-            "age_range": "20-40",
-            "season": "All Seasons",
-            "intensity": "Moderate",
-            "occasion": "All Day",
-            "image": "./images/good_girl_blush_collection.png"
-        }
-    ];
+    // Use the actual fragrances from the JSON file (loaded by the server)
+    // This will be populated by the server when it loads the fragrances.json file
+    const fragrances = window.fragrancesData || [];
+    
+    // Fallback to a small set if JSON data isn't available
+    if (fragrances.length === 0) {
+        console.warn('No fragrance data available, using fallback');
+        return [
+            {
+                "id": "fallback-1",
+                "name": "Sample Fragrance",
+                "brand": "Unknown",
+                "description": "Please ensure the fragrance data is loaded properly.",
+                "scents": ["Fresh", "Citrus"],
+                "sex": "Unisex",
+                "image": "./images/placeholder.png"
+            }
+        ];
+    }
 
     // Map answers to search criteria
     const sexMapping = {
@@ -2165,18 +2114,21 @@ function getClientSideRecommendations(answers) {
     const preferredScents = answers[4] || {};
     const selectedScents = Object.keys(preferredScents).map(scent => scentMapping[scent] || scent);
     
-    // Filter and score fragrances
+    // Enhanced scoring algorithm with better balance
     let scoredFragrances = fragrances.map(frag => {
         let score = 0;
+        let matchDetails = [];
         
-        // Score by sex (highest priority)
+        // Score by sex (high priority but not overwhelming)
         if (frag.sex === sex) {
-            score += 10;
+            score += 15;
+            matchDetails.push(`Gender match: +15`);
         } else if (frag.sex === 'Unisex' || sex === 'Unisex') {
-            score += 5;
+            score += 8;
+            matchDetails.push(`Unisex compatibility: +8`);
         }
         
-        // Score by scent preferences
+        // Score by scent preferences (most important factor)
         const scentMatches = selectedScents.filter(scent => 
             frag.scents.some(fragScent => 
                 fragScent.toLowerCase().includes(scent.toLowerCase())
@@ -2184,17 +2136,19 @@ function getClientSideRecommendations(answers) {
         );
         
         if (scentMatches.length > 0) {
-            score += scentMatches.length * 8;
+            const scentScore = scentMatches.length * 12; // Increased weight
+            score += scentScore;
+            matchDetails.push(`Scent matches (${scentMatches.join(', ')}): +${scentScore}`);
         }
         
-        // Season preference
+        // Season preference (medium priority)
         const season = answers[2];
         if (season) {
             const seasonalScents = {
-                'spring': ['Floral', 'Fresh', 'Citrus', 'Green'],
-                'summer': ['Citrus', 'Fresh', 'Aquatic', 'Light'],
-                'fall': ['Woody', 'Spicy', 'Amber', 'Warm'],
-                'winter': ['Woody', 'Sweet', 'Vanilla', 'Spicy', 'Musky']
+                'spring': ['Floral', 'Fresh', 'Citrus', 'Green', 'Light'],
+                'summer': ['Citrus', 'Fresh', 'Aquatic', 'Light', 'Marine'],
+                'fall': ['Woody', 'Spicy', 'Amber', 'Warm', 'Oriental'],
+                'winter': ['Woody', 'Sweet', 'Vanilla', 'Spicy', 'Musky', 'Warm spicy']
             };
             
             const seasonalMatch = seasonalScents[season]?.filter(scent => 
@@ -2203,20 +2157,119 @@ function getClientSideRecommendations(answers) {
                 )
             ) || [];
             
-            score += seasonalMatch.length * 4;
+            if (seasonalMatch.length > 0) {
+                const seasonScore = seasonalMatch.length * 6;
+                score += seasonScore;
+                matchDetails.push(`Season matches: +${seasonScore}`);
+            }
         }
         
-        return { ...frag, score };
+        // Intensity preference (medium priority)
+        const intensity = answers[5];
+        if (intensity && frag.intensity) {
+            const intensityMapping = {
+                'light': ['Light', 'Moderate'],
+                'moderate': ['Moderate', 'Light'],
+                'strong': ['Strong', 'Moderate'],
+                'intense': ['Strong', 'Intense']
+            };
+            
+            const preferredIntensities = intensityMapping[intensity] || [];
+            if (preferredIntensities.includes(frag.intensity)) {
+                score += 8;
+                matchDetails.push(`Intensity match: +8`);
+            }
+        }
+        
+        // Occasion preference (medium priority)
+        const occasion = answers[6];
+        if (occasion && frag.occasion) {
+            const occasionMapping = {
+                'day': ['All Day', 'Day'],
+                'night': ['Night', 'All Day'],
+                'special': ['Special', 'All Day'],
+                'all': ['All Day', 'Day', 'Night', 'Special']
+            };
+            
+            const preferredOccasions = occasionMapping[occasion] || [];
+            if (preferredOccasions.includes(frag.occasion)) {
+                score += 6;
+                matchDetails.push(`Occasion match: +6`);
+            }
+        }
+        
+        // Age range preference (lower priority)
+        const ageRange = answers[3];
+        if (ageRange && frag.age_range) {
+            const ageMapping = {
+                '18-24': ['18-35', '20-40', '20-45'],
+                '25-34': ['20-40', '25-45', '25-50'],
+                '35-44': ['25-45', '25-50', '35-50'],
+                '45+': ['25-50', '35-50', '45+']
+            };
+            
+            const preferredAges = ageMapping[ageRange] || [];
+            if (preferredAges.includes(frag.age_range)) {
+                score += 4;
+                matchDetails.push(`Age range match: +4`);
+            }
+        }
+        
+        // Add some randomness to prevent always getting the same results
+        const randomFactor = Math.random() * 3; // 0-3 points
+        score += randomFactor;
+        
+        return { ...frag, score, matchDetails };
     });
     
-    // Filter out zero scores and sort by score
+    // Filter out very low scores and sort by score
     scoredFragrances = scoredFragrances
-        .filter(frag => frag.score > 0)
+        .filter(frag => frag.score >= 5) // Minimum threshold
         .sort((a, b) => b.score - a.score);
     
-    // Return top 3 matches
-    return scoredFragrances.slice(0, 3).map(frag => {
-        const { score, ...fragrance } = frag;
+    // If we have fewer than 3 results, include some random ones
+    if (scoredFragrances.length < 3) {
+        const remainingFrags = fragrances.filter(frag => 
+            !scoredFragrances.some(scored => scored.id === frag.id)
+        );
+        const randomFrags = remainingFrags
+            .sort(() => Math.random() - 0.5)
+            .slice(0, 3 - scoredFragrances.length);
+        scoredFragrances = [...scoredFragrances, ...randomFrags];
+    }
+    
+    // Debug logging
+    console.log('=============== RECOMMENDATION DEBUG ===============');
+    console.log('User answers:', answers);
+    console.log('Mapped sex:', sex);
+    console.log('Selected scents:', selectedScents);
+    console.log('Total fragrances in database:', fragrances.length);
+    console.log('Total fragrances scored:', scoredFragrances.length);
+    
+    if (scoredFragrances.length > 0) {
+        console.log('Top 5 scored fragrances:');
+        scoredFragrances.slice(0, 5).forEach((frag, index) => {
+            console.log(`${index + 1}. ${frag.name} by ${frag.brand} (Score: ${frag.score.toFixed(2)})`);
+            console.log(`   Gender: ${frag.sex}, Scents: ${frag.scents.slice(0, 3).join(', ')}`);
+            console.log(`   Match details: ${frag.matchDetails.join(', ')}`);
+        });
+    }
+    console.log('==================================================');
+    
+    // Return top 3 matches with some variety
+    const topMatches = scoredFragrances.slice(0, 3);
+    
+    // Add some variety by occasionally swapping the last recommendation
+    if (scoredFragrances.length > 3 && Math.random() < 0.3) {
+        const alternative = scoredFragrances[3 + Math.floor(Math.random() * (scoredFragrances.length - 3))];
+        if (alternative) {
+            topMatches[2] = alternative;
+            console.log('Swapped 3rd recommendation for variety:', alternative.name);
+        }
+    }
+    
+    return topMatches.map(frag => {
+        const { score, matchDetails, ...fragrance } = frag;
         return fragrance;
     });
 }
