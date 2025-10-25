@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>Aroma AI</title>
-    <link rel="stylesheet" href="./css/style.css?v=3">
-    <script src="./js/image_upload.js?v=3"></script>
+    <link rel="stylesheet" href="./css/style.css?v=5">
+    <script src="./js/image_upload.js?v=5"></script>
 </head>
 <body>
     <main>
@@ -1543,7 +1546,30 @@
 </div>
     </main>
 
-    <script src="./js/main.js?v=3"></script>
+    <script src="./js/main.js?v=5"></script>
+    <script>
+        // Load fragrances data from JSON file
+        let fragrancesData = [];
+        
+        // Function to load fragrances data
+        async function loadFragrancesData() {
+            try {
+                const response = await fetch('/api/fragrances');
+                if (response.ok) {
+                    fragrancesData = await response.json();
+                    window.fragrancesData = fragrancesData;
+                    console.log(`Loaded ${fragrancesData.length} fragrances from JSON file`);
+                } else {
+                    console.error('Failed to load fragrances data');
+                }
+            } catch (error) {
+                console.error('Error loading fragrances data:', error);
+            }
+        }
+        
+        // Load fragrances data when page loads
+        document.addEventListener('DOMContentLoaded', loadFragrancesData);
+    </script>
     <script>
         let currentQuestion = 1;
         const totalQuestions = 6;
@@ -1871,60 +1897,72 @@ function handleQuizCompletion() {
     }, 1000); // Simulate processing time
 }
 
-// Function to display image-based recommendation results
+// Function to display image-based recommendation results (restored original design)
 function displayImageResults(data) {
+    console.log('displayImageResults called with data:', data);
     const scentResults = document.getElementById('scent-results');
+    console.log('scent-results element:', scentResults);
     
     if (!data.recommendations || data.recommendations.length === 0) {
+        console.log('No recommendations found');
         scentResults.innerHTML = '<p>No recommendations found for this image.</p>';
         scentResults.classList.remove('hidden');
+        scentResults.classList.add('fade-in');
+        scentResults.style.display = 'block';
+        scentResults.style.opacity = '1';
         return;
     }
     
-    // Create HTML for the results
-    let resultsHtml = '<div class="image-results">';
-    resultsHtml += '<h3>Based on your image, we recommend:</h3>';
+    console.log('Found recommendations:', data.recommendations.length);
     
-    // Show the first recommendation prominently
-    const topRecommendation = data.recommendations[0];
-    resultsHtml += '<div class="top-recommendation">';
-    resultsHtml += `<h4>${topRecommendation.name} by ${topRecommendation.brand}</h4>`;
-    resultsHtml += `<p>${topRecommendation.description}</p>`;
-    
-    // Add recommendation reasons
-    resultsHtml += '<div class="recommendation-reasons">';
-    resultsHtml += '<h5>Why we recommend this:</h5>';
-    resultsHtml += '<ul>';
-    resultsHtml += '<li>Perfect match for the fresh, natural elements in your image</li>';
-    resultsHtml += '<li>Contains citrus and fresh notes that complement outdoor settings</li>';
-    resultsHtml += '<li>Ideal for casual, everyday wear</li>';
-    resultsHtml += '</ul>';
-    resultsHtml += '</div>';
-    
-    resultsHtml += '</div>';
-    
-    // Show other recommendations
-    if (data.recommendations.length > 1) {
-        resultsHtml += '<div class="other-recommendations">';
-        resultsHtml += '<h4>Other great options:</h4>';
-        resultsHtml += '<div class="recommendation-grid">';
+    // Create the original design with predicted scents and fragrance recommendations
+    let resultsHtml = `
+        <div class="predicted-scents">
+            <h3 style="color: #2c5f5d; margin-bottom: 15px;">Detected Scents</h3>
+            <div class="scent-tags">
+                ${data.predicted_scents.map(scent => `<span class="scent-tag" style="background: #2c5f5d; color: white; padding: 8px 16px; border-radius: 20px; margin: 5px; display: inline-block;">${scent}</span>`).join('')}
+            </div>
+        </div>
         
-        for (let i = 1; i < Math.min(data.recommendations.length, 4); i++) {
-            const rec = data.recommendations[i];
-            resultsHtml += '<div class="recommendation-item">';
-            resultsHtml += `<h5>${rec.name} by ${rec.brand}</h5>`;
-            resultsHtml += `<p>${rec.description}</p>`;
-            resultsHtml += '</div>';
-        }
-        
-        resultsHtml += '</div>';
-        resultsHtml += '</div>';
-    }
+        <div class="fragrance-recommendations">
+            <h3 style="color: #2c5f5d; margin: 25px 0 15px 0;">Recommended Fragrances</h3>
+            <div class="recommendation-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px;">`;
     
-    resultsHtml += '</div>';
+    // Add all recommendations with images
+    data.recommendations.forEach((fragrance, index) => {
+        resultsHtml += `
+            <div class="recommendation-card" style="background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden; border: 1px solid #e0e0e0;">
+                <div class="fragrance-image" style="width: 100%; height: 200px; overflow: hidden; background: #f8f9fa;">
+                    <img src="${fragrance.image || './images/pattern.svg'}" alt="${fragrance.name}" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='./images/pattern.svg'">
+                </div>
+                <div class="fragrance-info" style="padding: 20px;">
+                    <h4 style="color: #2c5f5d; margin: 0 0 8px 0; font-size: 18px; font-weight: 600;">${fragrance.name}</h4>
+                    <p class="brand" style="color: #666; margin: 0 0 12px 0; font-style: italic; font-size: 14px;">${fragrance.brand}</p>
+                    <p class="description" style="color: #333; margin: 0 0 15px 0; line-height: 1.5; font-size: 14px;">${fragrance.description}</p>
+                    <div class="match-score" style="margin-bottom: 15px;">
+                        <span class="score-label" style="color: #666; font-size: 12px; margin-bottom: 5px; display: block;">Match Score:</span>
+                        <div class="score-bar" style="background: #e0e0e0; height: 8px; border-radius: 4px; overflow: hidden; margin-bottom: 5px;">
+                            <div class="score-fill" style="width: ${Math.max(70, 95 - index * 10)}%; height: 100%; background: linear-gradient(90deg, #2c5f5d, #4a8b87); transition: width 0.3s ease;"></div>
+                        </div>
+                        <span class="score-value" style="color: #2c5f5d; font-weight: 600; font-size: 14px;">${Math.max(70, 95 - index * 10)}%</span>
+                    </div>
+                    ${fragrance.link ? `<a href="${fragrance.link}" target="_blank" class="view-product" style="background: #2c5f5d; color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; display: inline-block; font-size: 14px; font-weight: 500; transition: background 0.3s;">View Product</a>` : ''}
+                </div>
+            </div>`;
+    });
     
+    resultsHtml += `
+            </div>
+        </div>`;
+    
+    console.log('Setting innerHTML with original design');
     scentResults.innerHTML = resultsHtml;
     scentResults.classList.remove('hidden');
+    scentResults.classList.add('fade-in');
+    scentResults.style.display = 'block';
+    scentResults.style.opacity = '1';
+    scentResults.style.transform = 'translateY(0)';
+    console.log('Original design results should now be visible');
     
     // Scroll to results
     setTimeout(() => {
@@ -1933,7 +1971,7 @@ function displayImageResults(data) {
 }
 
 // Client-side image-based recommendation function
-function getImageBasedRecommendations(imageFile) {
+function getImageBasedRecommendations(currentImageFile) {
     // Sample fragrance data for image-based recommendations
     const fragrances = [
         {
@@ -1994,7 +2032,7 @@ function getImageBasedRecommendations(imageFile) {
 
     // Simple image analysis based on file name and size
     // In a real implementation, you would analyze the actual image content
-    const fileName = imageFile.name.toLowerCase();
+    const fileName = currentImageFile.name.toLowerCase();
     let recommendedScents = ['Fresh', 'Citrus', 'Natural'];
     
     // Basic heuristics based on filename
@@ -2031,99 +2069,25 @@ function getImageBasedRecommendations(imageFile) {
 
 // Client-side recommendation function
 function getClientSideRecommendations(answers) {
-    // Sample fragrance data (subset for client-side)
-    const fragrances = [
-        {
-            "id": "001",
-            "name": "Sauvage",
-            "brand": "Dior",
-            "description": "A bold and sophisticated fragrance with a powerful blend of fresh spicy notes and warm amber.",
-            "scents": ["Fresh spicy", "Amber", "Citrus", "Aromatic", "Musky", "Woody", "Lavender", "Herbal", "Warm spicy"],
-            "notes": {
-                "top": ["Calabrian bergamot", "Sichuan pepper"],
-                "heart": ["Lavender", "Pink pepper", "Vetiver"],
-                "base": ["Ambroxan", "Patchouli"]
-            },
-            "sex": "Male",
-            "age_range": "25-45",
-            "season": "All Seasons",
-            "intensity": "Strong",
-            "occasion": "All Day",
-            "image": "./images/dior_sauvage_collection.png"
-        },
-        {
-            "id": "002",
-            "name": "Bleu de Chanel",
-            "brand": "Chanel",
-            "description": "A timeless and elegant woody aromatic fragrance with refreshing citrus and a sophisticated amber base.",
-            "scents": ["Citrus", "Fresh spicy", "Woody", "Aromatic", "Amber", "Smoky", "Balsamic", "Warm spicy", "Green", "Fresh"],
-            "notes": {
-                "top": ["Grapefruit", "Lemon", "Mint", "Pink pepper"],
-                "heart": ["Ginger", "Jasmine", "Nutmeg", "Iso E Super"],
-                "base": ["Sandalwood", "Cedarwood", "Amber", "Incense", "Musk"]
-            },
-            "sex": "Male",
-            "age_range": "25-50",
-            "season": "All Seasons",
-            "intensity": "Moderate",
-            "occasion": "All Day",
-            "image": "./images/bleu_de_chanel_collection.png"
-        },
-        {
-            "id": "003",
-            "name": "Acqua di Giò",
-            "brand": "Giorgio Armani",
-            "description": "A fresh aquatic fragrance inspired by the Mediterranean Sea with vibrant citrus and marine notes.",
-            "scents": ["Citrus", "Aromatic", "Marine", "Fresh spicy", "Floral", "Woody", "Fresh"],
-            "notes": {
-                "top": ["Jasmine", "Lemon", "Lime", "Orange", "Bergamot"],
-                "heart": ["Rosemary", "Nutmeg", "Mignonette", "Persimmon"],
-                "base": ["Patchouli", "White musk", "Oakmoss", "Cedarwood"]
-            },
-            "sex": "Male",
-            "age_range": "20-40",
-            "season": "Summer",
-            "intensity": "Moderate",
-            "occasion": "All Day",
-            "image": "./images/acqua_di_gio_collection.png"
-        },
-        {
-            "id": "004",
-            "name": "La Belle",
-            "brand": "Jean Paul Gaultier",
-            "description": "A gourmand fragrance with vanilla, pear, and woody notes creating a sweet and sensual experience.",
-            "scents": ["Vanilla", "Fruity", "Sweet", "Powdery", "Aquatic", "Aromatic", "Woody", "Amber", "Fresh", "Floral"],
-            "notes": {
-                "top": ["Pear", "Bergamot"],
-                "heart": ["Rose", "Jasmine"],
-                "base": ["Vanilla", "Amber", "Sandalwood"]
-            },
-            "sex": "Female",
-            "age_range": "18-35",
-            "season": "All Seasons",
-            "intensity": "Moderate",
-            "occasion": "All Day",
-            "image": "./images/la_belle_collection.png"
-        },
-        {
-            "id": "005",
-            "name": "Good Girl Blush",
-            "brand": "Carolina Herrera",
-            "description": "A floral fragrance with rose, jasmine, and vanilla creating a feminine and elegant scent.",
-            "scents": ["Floral", "Vanilla", "Citrus", "Fresh", "Sweet", "Yellow floral", "Rose", "Woody", "Fresh spicy", "Aromatic"],
-            "notes": {
-                "top": ["Pink pepper", "Bergamot"],
-                "heart": ["Rose", "Jasmine", "Tuberose"],
-                "base": ["Vanilla", "Sandalwood", "Amber"]
-            },
-            "sex": "Female",
-            "age_range": "20-40",
-            "season": "All Seasons",
-            "intensity": "Moderate",
-            "occasion": "All Day",
-            "image": "./images/good_girl_blush_collection.png"
-        }
-    ];
+    // Use the actual fragrances from the JSON file (loaded by the server)
+    // This will be populated by the server when it loads the fragrances.json file
+    const fragrances = window.fragrancesData || [];
+    
+    // Fallback to a small set if JSON data isn't available
+    if (fragrances.length === 0) {
+        console.warn('No fragrance data available, using fallback');
+        return [
+            {
+                "id": "fallback-1",
+                "name": "Sample Fragrance",
+                "brand": "Unknown",
+                "description": "Please ensure the fragrance data is loaded properly.",
+                "scents": ["Fresh", "Citrus"],
+                "sex": "Unisex",
+                "image": "./images/placeholder.png"
+            }
+        ];
+    }
 
     // Map answers to search criteria
     const sexMapping = {
@@ -2150,18 +2114,21 @@ function getClientSideRecommendations(answers) {
     const preferredScents = answers[4] || {};
     const selectedScents = Object.keys(preferredScents).map(scent => scentMapping[scent] || scent);
     
-    // Filter and score fragrances
+    // Enhanced scoring algorithm with better balance
     let scoredFragrances = fragrances.map(frag => {
         let score = 0;
+        let matchDetails = [];
         
-        // Score by sex (highest priority)
+        // Score by sex (high priority but not overwhelming)
         if (frag.sex === sex) {
-            score += 10;
+            score += 15;
+            matchDetails.push(`Gender match: +15`);
         } else if (frag.sex === 'Unisex' || sex === 'Unisex') {
-            score += 5;
+            score += 8;
+            matchDetails.push(`Unisex compatibility: +8`);
         }
         
-        // Score by scent preferences
+        // Score by scent preferences (most important factor)
         const scentMatches = selectedScents.filter(scent => 
             frag.scents.some(fragScent => 
                 fragScent.toLowerCase().includes(scent.toLowerCase())
@@ -2169,17 +2136,19 @@ function getClientSideRecommendations(answers) {
         );
         
         if (scentMatches.length > 0) {
-            score += scentMatches.length * 8;
+            const scentScore = scentMatches.length * 12; // Increased weight
+            score += scentScore;
+            matchDetails.push(`Scent matches (${scentMatches.join(', ')}): +${scentScore}`);
         }
         
-        // Season preference
+        // Season preference (medium priority)
         const season = answers[2];
         if (season) {
             const seasonalScents = {
-                'spring': ['Floral', 'Fresh', 'Citrus', 'Green'],
-                'summer': ['Citrus', 'Fresh', 'Aquatic', 'Light'],
-                'fall': ['Woody', 'Spicy', 'Amber', 'Warm'],
-                'winter': ['Woody', 'Sweet', 'Vanilla', 'Spicy', 'Musky']
+                'spring': ['Floral', 'Fresh', 'Citrus', 'Green', 'Light'],
+                'summer': ['Citrus', 'Fresh', 'Aquatic', 'Light', 'Marine'],
+                'fall': ['Woody', 'Spicy', 'Amber', 'Warm', 'Oriental'],
+                'winter': ['Woody', 'Sweet', 'Vanilla', 'Spicy', 'Musky', 'Warm spicy']
             };
             
             const seasonalMatch = seasonalScents[season]?.filter(scent => 
@@ -2188,20 +2157,119 @@ function getClientSideRecommendations(answers) {
                 )
             ) || [];
             
-            score += seasonalMatch.length * 4;
+            if (seasonalMatch.length > 0) {
+                const seasonScore = seasonalMatch.length * 6;
+                score += seasonScore;
+                matchDetails.push(`Season matches: +${seasonScore}`);
+            }
         }
         
-        return { ...frag, score };
+        // Intensity preference (medium priority)
+        const intensity = answers[5];
+        if (intensity && frag.intensity) {
+            const intensityMapping = {
+                'light': ['Light', 'Moderate'],
+                'moderate': ['Moderate', 'Light'],
+                'strong': ['Strong', 'Moderate'],
+                'intense': ['Strong', 'Intense']
+            };
+            
+            const preferredIntensities = intensityMapping[intensity] || [];
+            if (preferredIntensities.includes(frag.intensity)) {
+                score += 8;
+                matchDetails.push(`Intensity match: +8`);
+            }
+        }
+        
+        // Occasion preference (medium priority)
+        const occasion = answers[6];
+        if (occasion && frag.occasion) {
+            const occasionMapping = {
+                'day': ['All Day', 'Day'],
+                'night': ['Night', 'All Day'],
+                'special': ['Special', 'All Day'],
+                'all': ['All Day', 'Day', 'Night', 'Special']
+            };
+            
+            const preferredOccasions = occasionMapping[occasion] || [];
+            if (preferredOccasions.includes(frag.occasion)) {
+                score += 6;
+                matchDetails.push(`Occasion match: +6`);
+            }
+        }
+        
+        // Age range preference (lower priority)
+        const ageRange = answers[3];
+        if (ageRange && frag.age_range) {
+            const ageMapping = {
+                '18-24': ['18-35', '20-40', '20-45'],
+                '25-34': ['20-40', '25-45', '25-50'],
+                '35-44': ['25-45', '25-50', '35-50'],
+                '45+': ['25-50', '35-50', '45+']
+            };
+            
+            const preferredAges = ageMapping[ageRange] || [];
+            if (preferredAges.includes(frag.age_range)) {
+                score += 4;
+                matchDetails.push(`Age range match: +4`);
+            }
+        }
+        
+        // Add some randomness to prevent always getting the same results
+        const randomFactor = Math.random() * 3; // 0-3 points
+        score += randomFactor;
+        
+        return { ...frag, score, matchDetails };
     });
     
-    // Filter out zero scores and sort by score
+    // Filter out very low scores and sort by score
     scoredFragrances = scoredFragrances
-        .filter(frag => frag.score > 0)
+        .filter(frag => frag.score >= 5) // Minimum threshold
         .sort((a, b) => b.score - a.score);
     
-    // Return top 3 matches
-    return scoredFragrances.slice(0, 3).map(frag => {
-        const { score, ...fragrance } = frag;
+    // If we have fewer than 3 results, include some random ones
+    if (scoredFragrances.length < 3) {
+        const remainingFrags = fragrances.filter(frag => 
+            !scoredFragrances.some(scored => scored.id === frag.id)
+        );
+        const randomFrags = remainingFrags
+            .sort(() => Math.random() - 0.5)
+            .slice(0, 3 - scoredFragrances.length);
+        scoredFragrances = [...scoredFragrances, ...randomFrags];
+    }
+    
+    // Debug logging
+    console.log('=============== RECOMMENDATION DEBUG ===============');
+    console.log('User answers:', answers);
+    console.log('Mapped sex:', sex);
+    console.log('Selected scents:', selectedScents);
+    console.log('Total fragrances in database:', fragrances.length);
+    console.log('Total fragrances scored:', scoredFragrances.length);
+    
+    if (scoredFragrances.length > 0) {
+        console.log('Top 5 scored fragrances:');
+        scoredFragrances.slice(0, 5).forEach((frag, index) => {
+            console.log(`${index + 1}. ${frag.name} by ${frag.brand} (Score: ${frag.score.toFixed(2)})`);
+            console.log(`   Gender: ${frag.sex}, Scents: ${frag.scents.slice(0, 3).join(', ')}`);
+            console.log(`   Match details: ${frag.matchDetails.join(', ')}`);
+        });
+    }
+    console.log('==================================================');
+    
+    // Return top 3 matches with some variety
+    const topMatches = scoredFragrances.slice(0, 3);
+    
+    // Add some variety by occasionally swapping the last recommendation
+    if (scoredFragrances.length > 3 && Math.random() < 0.3) {
+        const alternative = scoredFragrances[3 + Math.floor(Math.random() * (scoredFragrances.length - 3))];
+        if (alternative) {
+            topMatches[2] = alternative;
+            console.log('Swapped 3rd recommendation for variety:', alternative.name);
+        }
+    }
+    
+    return topMatches.map(frag => {
+        const { score, matchDetails, ...fragrance } = frag;
         return fragrance;
     });
 }
@@ -2430,11 +2498,13 @@ if (fragrance.link) {
             const captureBtn = document.getElementById('capture-btn');
             const submitBtn = document.getElementById('submit-btn');
             let stream = null;
+            let currentImageFile = null;
 
             // File Upload Handler
             fileUpload.addEventListener('change', (e) => {
                 const file = e.target.files[0];
                 if (file) {
+                    currentImageFile = file; // Store the file
                     const reader = new FileReader();
                     reader.onload = (e) => {
                         previewPlaceholder.classList.add('hidden');
@@ -2470,6 +2540,12 @@ if (fragrance.link) {
                 canvas.width = cameraFeed.videoWidth;
                 canvas.height = cameraFeed.videoHeight;
                 canvas.getContext('2d').drawImage(cameraFeed, 0, 0);
+                
+                // Convert canvas to blob and create a file
+                canvas.toBlob((blob) => {
+                    currentImageFile = new File([blob], 'camera-capture.png', { type: 'image/png' });
+                }, 'image/png');
+                
                 previewImage.src = canvas.toDataURL('image/png');
                 previewImage.classList.remove('hidden');
                 cameraFeed.classList.add('hidden');
@@ -2480,7 +2556,7 @@ if (fragrance.link) {
 
             // submit Handler
             submitBtn.addEventListener('click', function () {
-    if (!imageFile) {
+    if (!currentImageFile) {
         alert("Please select or capture an image first.");
         return;
     }
@@ -2495,7 +2571,7 @@ if (fragrance.link) {
     // Simulate processing time
     setTimeout(() => {
         // Simple client-side image analysis
-        const recommendations = getImageBasedRecommendations(imageFile);
+        const recommendations = getImageBasedRecommendations(currentImageFile);
         
         // Hide loader with animation
         hideLoader();
