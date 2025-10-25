@@ -1,0 +1,1429 @@
+{
+  "fragrances": [
+    {
+      "id": "001",
+      "name": "Sauvage",
+      "brand": "Dior",
+      "description": "A bold and sophisticated fragrance with a powerful blend of fresh spicy notes and warm amber.",
+      "scents": ["Fresh spicy", "Amber", "Citrus", "Aromatic", "Musky", "Woody", "Lavender", "Herbal", "Warm spicy"],
+      "notes": {
+        "top": ["Calabrian bergamot", "Sichuan pepper"],
+        "heart": ["Lavender", "Pink pepper", "Vetiver"],
+        "base": ["Ambroxan", "Patchouli"]
+      },
+      "sex": "Male",
+      "age_range": "25-45",
+      "season": "All Seasons",
+      "intensity": "Strong",
+      "occasion": "All Day",
+      "image": "/images/dior_sauvage_collection.png",
+      "link": "https://www.sephora.com/product/sauvage-parfum-P449122?skuId=2267797&icid2=products%20grid:p449122:product"
+    },
+    {
+      "id": "002",
+      "name": "Bleu de Chanel",
+      "brand": "Chanel",
+      "description": "A timeless and elegant woody aromatic fragrance with refreshing citrus and a sophisticated amber base.",
+      "scents": ["Citrus", "Fresh spicy", "Woody", "Aromatic", "Amber", "Smoky", "Balsamic", "Warm spicy", "Green", "Fresh"],
+      "notes": {
+        "top": ["Grapefruit", "Lemon", "Mint", "Pink pepper"],
+        "heart": ["Ginger", "Jasmine", "Nutmeg", "Iso E Super"],
+        "base": ["Sandalwood", "Cedarwood", "Amber", "Incense", "Musk"]
+      },
+      "sex": "Male",
+      "age_range": "25-50",
+      "season": "All Seasons",
+      "intensity": "Moderate",
+      "occasion": "All Day",
+      "image": "/images/bleu_de_chanel_collection.png",
+      "link": "https://www.sephora.com/product/bleu-de-chanel-eau-de-parfum-P394949?skuId=1695972&icid2=products%20grid:p394949:product"
+    },
+    {
+      "id": "003",
+      "name": "Acqua di Giò",
+      "brand": "Giorgio Armani",
+      "description": "A fresh aquatic fragrance inspired by the Mediterranean Sea with vibrant citrus and marine notes.",
+      "scents": ["Citrus", "Aromatic", "Marine", "Fresh spicy", "Floral", "Woody", "Fresh"],
+      "notes": {
+        "top": ["Jasmine", "Lemon", "Lime", "Orange", "Bergamot"],
+        "heart": ["Rosemary", "Nutmeg", "Mignonette", "Persimmon"],
+        "base": ["Patchouli", "White musk", "Oakmoss", "Cedarwood"]
+      },
+      "sex": "Male",
+      "age_range": "18-40",
+      "season": "Spring, Summer",
+      "intensity": "Moderate",
+      "occasion": "Daytime",
+      "image": "/images/acqua_di_gio_collection.png",
+      "link": "https://www.sephora.com/product/P12430"
+    },
+    {
+      "id": "004",
+      "name": "Noir Extreme",
+      "brand": "Tom Ford",
+      "description": "A warm and spicy oriental fragrance with rich vanilla and amber accords for a luxurious sensory experience.",
+      "scents": ["Warm spicy", "Sweet", "Vanilla", "Woody", "Powdery", "Amber", "Fresh spicy", "Aromatic", "White floral", "Balsamic"],
+      "notes": {
+        "top": ["Cardamom", "Nutmeg", "Saffron"],
+        "heart": ["Mastic", "Orange blossom", "Jasmine", "Rose"],
+        "base": ["Amber", "Vanilla", "Sandalwood", "Tonka bean", "Woods"]
+      },
+      "sex": "Male",
+      "age_range": "25-45",
+      "season": "Fall, Winter",
+      "intensity": "Strong",
+      "occasion": "Evening, Special Occasions",
+      "image": "/images/noir_extreme_collection.png",
+      "link": "https://www.sephora.com/product/noir-extreme-P395693?skuId=1706423&icid2=products%20grid:p395693:product"
+    },
+    {
+      "id": "005",
+      "name": "Aventus",
+      "brand": "Creed",
+      "description": "A legendary fruity and smoky fragrance with pineapple, blackcurrant, and birch that exudes confidence and success.",
+      "scents": ["Fruity", "Sweet", "Woody", "Leather", "Smoky", "Citrus", "Musky", "Tropical", "Fresh", "Mossy"],
+      "notes": {
+        "top": ["Pineapple", "Black currant", "Apple", "Bergamot"],
+        "heart": ["Birch", "Patchouli", "Jasmine", "Rose"],
+        "base": ["Musk", "Oakmoss", "Ambergris", "Vanilla"]
+      },
+      "sex": "Male",
+      "age_range": "25-55",
+      "season": "All Seasons",
+      "intensity": "Strong",
+      "occasion": "All Day",
+      "image": "/images/aventus_creed_collection.png",
+      "link": "https://www.nordstrom.com/s/creed-aventus-fragrance/3658281?color=NO+COLOR&size=1+oz&country=US&currency=USD&utm_source=google&utm_medium=organic&utm_campaign=seo_shopping&utm_channel=low_nd_seo_shopping&srsltid=AfmBOoqH4Av2t_hIQaoF-eJhJhxgyfgABI8-iZylNgbN4TxwKXpSHBm5WFQ&gQT=2"
+    },
+    {
+      "id": "006",
+      "name": "One Million",
+      "brand": "Paco Rabanne",
+      "description": "A bold and seductive fragrance with spicy cinnamon and leather notes for a confident and luxurious statement.",
+      "scents": ["Warm spicy", "Cinnamon", "Citrus", "Amber", "Woody", "Leather", "Rose", "Animalic", "Green", "Patchouli"],
+      "notes": {
+        "top": ["Grapefruit", "Mint", "Blood orange"],
+        "heart": ["Cinnamon", "Rose", "Spice"],
+        "base": ["Leather", "Amber", "Patchouli", "Wood"]
+      },
+      "sex": "Male",
+      "age_range": "20-35",
+      "season": "Fall, Winter",
+      "intensity": "Strong",
+      "occasion": "Evening, Special Occasions",
+      "image": "/images/one_million_collection.png",
+      "link": "https://www.sephora.com/product/1-million-P269120?skuId=1200773&icid2=products%20grid:p269120:product"
+    },
+    {
+      "id": "007",
+      "name": "Spicebomb",
+      "brand": "Viktor & Rolf",
+      "description": "An explosive and addictive spicy fragrance with cinnamon, tobacco and leather notes for a masculine edge.",
+      "scents": ["Warm spicy", "Cinnamon", "Tobacco", "Sweet", "Soft spicy", "Leather", "Aromatic", "Citrus"],
+      "notes": {
+        "top": ["Bergamot", "Grapefruit", "Pink pepper"],
+        "heart": ["Cinnamon", "Saffron", "Paprika"],
+        "base": ["Leather", "Tobacco", "Vetiver", "Balsam fir"]
+      },
+      "sex": "Male",
+      "age_range": "25-40",
+      "season": "Fall, Winter",
+      "intensity": "Strong",
+      "occasion": "Evening, Special Occasions",
+      "image": "/images/spicebomb_collectiong.png",
+      "link": "https://www.sephora.com/product/spicebomb-P376737?skuId=1463207&icid2=products%20grid:p376737:product"
+    },
+    {
+      "id": "008",
+      "name": "Le Male",
+      "brand": "Jean Paul Gaultier",
+      "description": "An iconic fragrance with lavender, vanilla and mint that balances freshness with sensual warmth.",
+      "scents": ["Aromatic", "Vanilla", "Fresh spicy", "Lavender", "Warm spicy", "Green", "Powdery", "Sweet", "Amber", "Cinnamon"],
+      "notes": {
+        "top": ["Mint", "Lavender", "Artemisia", "Cardamom"],
+        "heart": ["Cinnamon", "Cumin", "Orange blossom", "Caraway"],
+        "base": ["Vanilla", "Tonka bean", "Sandalwood", "Cedarwood"]
+      },
+      "sex": "Male",
+      "age_range": "20-40",
+      "season": "All Seasons",
+      "intensity": "Moderate",
+      "occasion": "All Day",
+      "image": "/images/jean_paul_collection.png",
+      "link": "https://www.macys.com/shop/product/jean-paul-gaultier-le-male-eau-de-toilette-fragrance-collection?m_sc=aff&cjevent=6750e5ca075d11f0812901850a82b832&m_sb=aff&cjdata=MXxOfDB8WXww&clickid=6750e5ca075d11f0812901850a82b832&m_si=3894982&ID=419745&m_pl=Fragrantica%2BInc"
+    },
+    {
+      "id": "009",
+      "name": "The One for Men",
+      "brand": "Dolce & Gabbana",
+      "description": "A sophisticated amber spicy fragrance with tobacco and ginger that embodies masculine elegance.",
+      "scents": ["Amber", "Fresh spicy", "Tobacco", "Aromatic", "Citrus", "Sweet", "Warm spicy", "Woody", "White floral", "Fresh"],
+      "notes": {
+        "top": ["Grapefruit", "Coriander", "Basil", "Cardamom"],
+        "heart": ["Ginger", "Orange blossom", "Tobacco"],
+        "base": ["Cedarwood", "Amber", "Musk", "Vanilla", "Tobacco"]
+      },
+      "sex": "Male",
+      "age_range": "25-45",
+      "season": "Fall, Winter",
+      "intensity": "Moderate",
+      "occasion": "Evening, Special Occasions",
+      "image": "/images/the_one_for_men_collection.png",
+      "link": "https://www.macys.com/shop/product/dolce-gabbana-the-one-eau-de-toilette-fragrance-collection?m_sc=aff&cjevent=a8a70052075d11f0806f01550a82b824&m_sb=aff&cjdata=MXxOfDB8WXww&clickid=a8a70052075d11f0806f01550a82b824&m_si=3894982&ID=825198&m_pl=Fragrantica%2BInc"
+    },
+    {
+      "id": "010",
+      "name": "Dior Homme Intense",
+      "brand": "Dior",
+      "description": "An elegant and sophisticated fragrance featuring iris and leather for a refined masculine presence.",
+      "scents": ["Iris", "Woody", "Powdery", "Earthy", "Violet", "Aromatic", "Floral", "Lavender", "Musky", "Fruity"],
+      "notes": {
+        "top": ["Iris", "Amber", "Leather"],
+        "heart": ["Vetiver", "Woody notes"],
+        "base": ["Leather", "Vetiver", "Patchouli", "Suede", "Tonka bean"]
+      },
+      "sex": "Male",
+      "age_range": "25-45",
+      "season": "Fall, Winter",
+      "intensity": "Moderate",
+      "occasion": "Evening, Special Occasions",
+      "image": "/images/dior_homme_collection.png",
+      "link": "https://www.jomashop.com/chdior-diimes34-a.html?srsltid=AfmBOor-1Ggw_W_eSGknMwUSQq8k8-MTNAyXv3XdmYn5jnmCT8Y4fcgq"
+    },
+    {
+      "id": "011",
+      "name": "Stronger With You Absolutely",
+      "brand": "Emporio Armani",
+      "description": "A warm and inviting fragrance with rum, vanilla, and chestnut for a sweet and comforting embrace.",
+      "scents": ["Vanilla", "Woody", "Balsamic", "Rum", "Aromatic", "Warm spicy", "Nutty", "Powdery", "Lavender", "Sweet"],
+      "notes": {
+        "top": ["Rum", "Elemi", "Bergamot"],
+        "heart": ["Lavender", "Davana"],
+        "base": ["Madagascar Vanilla", "Chestnut", "Cedar", "Patchouli"]
+      },
+      "sex": "Male",
+      "age_range": "25-40",
+      "season": "Fall, Winter",
+      "intensity": "Strong",
+      "occasion": "Evening, Special Occasions",
+      "image": "/images/stronger_absolutely_collection.png",
+      "link": "https://www.sephora.com/product/giorgio-armani-beauty-stronger-with-you-absolutely-eau-de-parfum-P514247?skuId=2823516&icid2=products%20grid:p514247:product"
+    },
+    {
+      "id": "012",
+      "name": "Born in Roma Extradose Uomo",
+      "brand": "Valentino",
+      "description": "A modern and vibrant fragrance with aromatic lavender and spicy notes for a contemporary Italian flair.",
+      "scents": ["Lavender", "Warm spicy", "Woody", "Aromatic", "Fresh spicy"],
+      "notes": {
+        "top": ["Spicy Notes"],
+        "heart": ["Wild Lavender"],
+        "base": ["Woody Notes"]
+      },
+      "sex": "Male",
+      "age_range": "20-35",
+      "season": "Spring, Fall",
+      "intensity": "Moderate",
+      "occasion": "Daytime, Evening",
+      "image": "/images/valentino_roma_collection.png",
+      "link": "https://www.sephora.com/product/valentino-uomo-born-in-roma-P452943?skuId=2302099&icid2=products%20grid:p452943:product"
+    },
+    {
+      "id": "013",
+      "name": "Polo Black",
+      "brand": "Ralph Lauren",
+      "description": "A fresh and tropical fragrance with mango and patchouli notes that embodies modern sophistication.",
+      "scents": ["Tropical", "Fruity", "Woody", "Sweet", "Citrus", "Aromatic", "Warm spicy", "Patchouli", "Terpenoid", "Powdery"],
+      "notes": {
+        "top": ["Mango", "Sandalwood", "Tangerine"],
+        "heart": ["Sage", "Wormwood", "Lemon"],
+        "base": ["Patchouli", "Tonka bean"]
+      },
+      "sex": "Male",
+      "age_range": "20-40",
+      "season": "Spring, Summer",
+      "intensity": "Moderate",
+      "occasion": "Daytime",
+      "image": "/images/black_polo_lauren_collection.png",
+      "link": "https://www.ralphlaurenfragrances.com/en_US/men/polo-black/polo-black-eau-de-toilette/RLFE012.html?dwvar_RLFE012_size=125ML"
+    },
+    {
+      "id": "014",
+      "name": "Oud Wood",
+      "brand": "Tom Ford",
+      "description": "A luxurious and exotic fragrance featuring rare oud wood and spicy cardamom for a rich and opulent experience.",
+      "scents": ["Woody", "Oud", "Warm spicy", "Aromatic", "Vanilla", "Balsamic", "Fresh spicy", "Amber", "Powdery", "Sweet"],
+      "notes": {
+        "top": ["Agarwood (Oud)", "Brazilian Rosewood", "Cardamom"],
+        "heart": ["Sandalwood", "Sichuan Pepper"],
+        "base": ["Vanilla", "Vetiver", "Tonka Bean", "Amber"]
+      },
+      "sex": "Unisex",
+      "age_range": "30-55",
+      "season": "Fall, Winter",
+      "intensity": "Strong",
+      "occasion": "Evening, Special Occasions",
+      "image": "/images/tom_ford_oud_collection.png",
+      "link": "https://www.sephora.com/product/oud-wood-P393167?skuId=1565902&icid2=products%20grid:p393167:product"
+    },
+    {
+      "id": "015",
+      "name": "Eros",
+      "brand": "Versace",
+      "description": "A bold and seductive fragrance with mint, green apple, and vanilla for a passionate and vibrant statement.",
+      "scents": ["Vanilla", "Aromatic", "Green", "Fresh spicy", "Amber", "Fruity", "Citrus", "Sweet", "Woody", "Fresh"],
+      "notes": {
+        "top": ["Mint", "Green apple", "Lemon"],
+        "heart": ["Tonka bean", "Ambroxan", "Geranium"],
+        "base": ["Madagascar vanilla", "Virginian cedar", "Atlas cedar", "Vetiver", "Oak moss"]
+      },
+      "sex": "Male",
+      "age_range": "18-35",
+      "season": "Spring, Fall",
+      "intensity": "Strong",
+      "occasion": "Evening, Special Occasions",
+      "image": "/images/versace_eros_collection.png",
+      "link": "https://www.sephora.com/product/versace-eros-parfum-P477738?skuId=2480689&icid2=products%20grid:p477738:product"
+    },
+    {
+      "id": "016",
+      "name": "Baccarat Rouge 540 Extrait de parfum",
+      "brand": "Maison Francis Kurkdjian",
+      "description": "An intense and luxurious amber-woody fragrance with concentrated saffron and jasmine notes for an opulent and long-lasting sillage.",
+      "scents": ["Almond", "Amber", "Warm spicy", "Woody", "Animal", "Musky", "Nutty", "Fruity", "White floral", "Metallic"],
+      "notes": {
+        "top": ["Bitter almond", "Saffron"],
+        "heart": ["Egyptian jasmine", "Virginia cedar"],
+        "base": ["Ambergris", "Woody notes", "Musk", "Ambrosian", "Cashmere"]
+      },
+      "sex": "Unisex",
+      "age_range": "25-55",
+      "season": "All Seasons",
+      "intensity": "Strong",
+      "occasion": "Special Occasions, Evening",
+      "image": "/images/baccarat_extrait_collection.png",
+      "link": "https://www.neimanmarcus.com/p/maison-francis-kurkdjian-baccarat-rouge-540-extrait-de-parfum-2-4-oz-prod203310173"
+    },
+    {
+      "id": "017",
+      "name": "Another 13",
+      "brand": "Le Labo",
+      "description": "A unique musky and ambery fragrance with subtle fruity notes for a modern and minimalist signature scent.",
+      "scents": ["Musky", "Amber", "Woody", "Animalic", "Fruity", "Floral", "Powdery"],
+      "notes": {
+        "top": ["Pear", "Apple", "Citruses"],
+        "heart": ["Ambrette", "Amyl salicylate", "Moss", "Jasmine"],
+        "base": ["Iso E super", "Catalog", "Ambrettolide", "Helvetolide"]
+      },
+      "sex": "Unisex",
+      "age_range": "25-45",
+      "season": "All Seasons",
+      "intensity": "Moderate",
+      "occasion": "All Day",
+      "image": "/images/another_13_collection.png",
+      "link": "https://www.nordstrom.com/s/le-labo-an0ther-13-eau-de-parfum/4835770?srsltid=AfmBOoq75OXSmHN9E5B2z-EWJw9478tIl6k5fM0HQG020f1fkRqUZSK6"
+    },
+    {
+      "id": "018",
+      "name": "Imagination",
+      "brand": "Louis Vuitton",
+      "description": "A luxurious and aromatic fragrance with a blend of spices, leather, and woody notes for a sophisticated and masculine presence.",
+      "scents": ["Citrus", "Fresh spicy", "Fresh", "Green", "Amber"],
+      "notes": {
+        "top": ["Citron", "Calabrian bergamot", "Silicon orange"],
+        "heart": ["Tunisian neroli", "Nigerian ginger", "Ceylon cinnamon"],
+        "base": ["Chinese black tea", "Guaiac wood", "Olibanum", "Ambroxan"]
+      },
+      "sex": "Male",
+      "age_range": "25-55",
+      "season": "Spring, Summer",
+      "intensity": "Moderate",
+      "occasion": "Daytime, Special Occasions",
+      "image": "/images/lv_imagination_collection.png",
+      "link": "https://us.louisvuitton.com/eng-us/products/imagination-nvprod2970067v/LP0219?utm_source=google&utm_medium=cpc&utm_campaign=LV_FLG_USA_ALWON_UNI_FRAG_OnGoing_EC_SHOP_GSHO_MUL_ENG_USD_NAPP_BRAN_PLA&gad_source=1&gclid=Cj0KCQjwv_m-BhC4ARIsAIqNeBv8rTanOOj5YGtA68qi-5cbYfUsMe_3xla1fkO6JwaJ9UU1k-LtaeAaAtOPEALw_wcB&gclsrc=aw.ds"
+    },
+    {
+      "id": "019",
+      "name": "Mojave Ghost",
+      "brand": "Byredo",
+      "description": "A delicate and ethereal floral woody fragrance inspired by the Mojave Desert's ghost flower.",
+      "scents": ["Floral", "Woody", "Powdery", "Violet", "Musky", "Fruity", "Amber", "Citrus"],
+      "notes": {
+        "top": ["Sapodilla", "Ambrette"],
+        "heart": ["Magnolia", "Violet", "Sandalwood"],
+        "base": ["Ambergris", "Cedar", "Musk"]
+      },
+      "sex": "Unisex",
+      "age_range": "25-45",
+      "season": "Spring, Summer",
+      "intensity": "Light",
+      "occasion": "Daytime",
+      "image": "/images/mojave_ghost_collection.png",
+      "link": "https://www.neimanmarcus.com/p/byredo-mojave-ghost-eau-de-parfum-1-7-oz-prod175620176?childItemId=NMC1REH_&msid=167220&position=0"
+    },
+    {
+      "id": "020",
+      "name": "Orphéon Eau de Parfum",
+      "brand": "Diptyque",
+      "description": "A sophisticated and powdery fragrance with woody notes and jasmine inspired by the legendary Parisian jazz club.",
+      "scents": ["Powdery", "Woody", "Aromatic", "Fresh spicy", "White floral"],
+      "notes": {
+        "top": ["Juniper berries"],
+        "heart": ["Jasmine"],
+        "base": ["Powdery notes", "Cedar", "Tonka bean"]
+      },
+      "sex": "Unisex",
+      "age_range": "30-50",
+      "season": "Fall, Winter",
+      "intensity": "Moderate",
+      "occasion": "Evening",
+      "image": "/images/diptyque_collection.png",
+      "link": "https://www.neimanmarcus.com/p/diptyque-orpheon-eau-de-parfum-2-4-oz-prod240650344?childItemId=NMC5C3Y_&msid=4065997&position=0"
+    },
+    {
+      "id": "021",
+      "name": "Polo Cologne Intense Eau de Parfum",
+      "brand": "Ralph Lauren",
+      "description": "A modern and aromatic fragrance with fresh herbs and woody notes that embodies timeless masculine elegance.",
+      "scents": ["Aromatic", "Fresh spicy", "Green", "Woody", "Citrus", "Amber", "Patchouli", "Earthy"],
+      "notes": {
+        "top": ["Basil", "Mint", "Grapefruit"],
+        "heart": ["Clary sage", "Violet leaf", "Thyme"],
+        "base": ["Ambroxan", "Patchouli", "Vetiver"]
+      },
+      "sex": "Male",
+      "age_range": "25-45",
+      "season": "Spring, Summer",
+      "intensity": "Moderate",
+      "occasion": "Daytime",
+      "image": "/images/polo_intense_collection.png",
+      "link": "https://www.sephora.com/product/ralph-lauren-polo-cologne-intense-P471067?skuId=2408581&icid2=products%20grid:p471067:product"
+    },
+    {
+      "id": "022",
+      "name": "Wanted Eau de Parfum",
+      "brand": "Azzaro",
+      "description": "A magnetic and aromatic fragrance with juniper berries and sage for a confident and adventurous man.",
+      "scents": ["Aromatic", "Woody", "Fresh spicy", "Herbal"],
+      "notes": {
+        "top": ["Juniper berries"],
+        "heart": ["Sage"],
+        "base": ["Vetiver"]
+      },
+      "sex": "Male",
+      "age_range": "20-40",
+      "season": "Spring, Summer",
+      "intensity": "Moderate",
+      "occasion": "Daytime",
+      "image": "/images/azzaro_wanted_collection.png",
+      "link": "https://www.sephora.com/product/P510387"
+    },
+    {
+      "id": "023",
+      "name": "Donna Born in Roma",
+      "brand": "Valentino",
+      "description": "A modern floral woody fragrance with blackcurrant and vanilla for a bold and feminine Roman elegance.",
+      "scents": ["Woody", "Vanilla", "Fruity", "Soft spicy", "White floral", "Powdery", "Floral", "Musky", "Green", "Citrus"],
+      "notes": {
+        "top": ["Black currant", "Pink pepper", "Bergamot"],
+        "heart": ["Jasmine", "Jasmine sambac", "Jasmine tea"],
+        "base": ["Bourbon vanilla", "Cashmere", "Guaiac wood"]
+      },
+      "sex": "Female",
+      "age_range": "20-40",
+      "season": "Fall, Winter",
+      "intensity": "Moderate",
+      "occasion": "Evening, Special Occasions",
+      "image": "/images/valentino_donna_collection.png",
+      "link": "https://www.sephora.com/product/born-in-roma-P449116?country_switch=us&lang=en&skuId=2249670&om_mmc=ppc-GG_17791296865___2249670__9016849_c&country_switch=us&lang=en&gad_source=1&gclid=Cj0KCQjwv_m-BhC4ARIsAIqNeBthNQarUpll_cBWenu8V0VxfPFzOXRobQFVWNT37w-TmCQ97ho0jdcaAgKdEALw_wcB&gclsrc=aw.ds"
+    },
+    {
+      "id": "024",
+      "name": "Good Girl Blush",
+      "brand": "Carolina Herrera",
+      "description": "A playful and elegant floral fragrance with peony and ylang-ylang for a confident and feminine presence.",
+      "scents": ["Floral", "Vanilla", "Citrus", "Fresh", "Sweet", "Yellow floral", "Rose", "Woody", "Fresh spicy", "Aromatic"],
+      "notes": {
+        "top": ["Bergamot", "Bitter almond"],
+        "heart": ["Peony", "Ylang-ylang"],
+        "base": ["Vanilla", "Coumarin"]
+      },
+      "sex": "Female",
+      "age_range": "20-40",
+      "season": "Spring, Summer",
+      "intensity": "Moderate",
+      "occasion": "Daytime, Evening",
+      "image": "/images/good_girl_blush_collection.png",
+      "link": "https://www.sephora.com/product/good-girl-blush-eau-de-parfum-P504996?skuId=2645026&icid2=products%20grid:p504996:product"
+    },
+    {
+      "id": "025",
+      "name": "Musc Invisible",
+      "brand": "Juliette Has a Gun",
+      "description": "A delicate and clean musky fragrance with cotton flower for a subtle and intimate second-skin effect.",
+      "scents": ["Powdery", "Musky", "Floral", "White floral"],
+      "notes": {
+        "top": ["Jasmine"],
+        "heart": ["Cotton flower"],
+        "base": ["White musk"]
+      },
+      "sex": "Female",
+      "age_range": "20-40",
+      "season": "All Seasons",
+      "intensity": "Light",
+      "occasion": "Daytime",
+      "image": "/images/juliette_collection.png",
+      "link": "https://www.sephora.com/product/juliette-has-a-gun-musc-invisible-P469132?skuId=2316362&icid2=products%20grid:p469132:product"
+    },
+    {
+      "id": "026",
+      "name": "Libre",
+      "brand": "Yves Saint Laurent",
+      "description": "A bold and feminine fragrance with lavender and orange blossom for a modern expression of freedom.",
+      "scents": ["White floral", "Citrus", "Lavender", "Vanilla", "Aromatic", "Sweet", "Powdery", "Animalic", "Woody", "Musky"],
+      "notes": {
+        "top": ["Lavender", "Mandarin orange", "Black currant", "Petitgrain"],
+        "heart": ["Lavender", "Orange blossom", "Jasmine"],
+        "base": ["Madagascar vanilla", "Musk", "Cedar", "Ambergris"]
+      },
+      "sex": "Female",
+      "age_range": "25-45",
+      "season": "All Seasons",
+      "intensity": "Moderate",
+      "occasion": "All Day",
+      "image": "/images/ysl_libre_collection.png",
+      "link": "https://www.sephora.com/product/libre-eau-de-parfum-P448102?skuId=2249738&icid2=products%20grid:p448102:product"
+    },
+    {
+      "id": "027",
+      "name": "BurBerry Her",
+      "brand": "BurBerry",
+      "description": "A vibrant and fruity fragrance with berries and musk for a modern and energetic British spirit.",
+      "scents": ["Fruity", "Sweet", "Woody", "Powdery", "Musky"],
+      "notes": {
+        "top": ["Strawberry", "Raspberry", "Blackberry", "Sour cherry", "Black currant", "Mandarin orange", "Lemon"],
+        "heart": ["Violet", "Jasmine"],
+        "base": ["Musk", "Vanilla", "Cashmere", "Woody notes", "Amber", "Oakmoss", "Patchouli"]
+      },
+      "sex": "Female",
+      "age_range": "18-35",
+      "season": "Spring, Summer",
+      "intensity": "Moderate",
+      "occasion": "Daytime",
+      "image": "/images/burberry_her.png",
+      "link": "https://www.sephora.com/product/her-eau-de-parfum-P437631?skuId=2160455&icid2=products%20grid:p437631:product"
+    },
+    {
+      "id": "028",
+      "name": "Delina",
+      "brand": "Parfums de Marly",
+      "description": "A luxurious and elegant rose fragrance with fruity notes for a sophisticated and feminine statement.",
+      "scents": ["Rose", "Floral", "Fruity", "Fresh", "Musky", "Green", "Aromatic", "Powdery", "Tropical", "Woody"],
+      "notes": {
+        "top": ["Litchi", "Rhubarb", "Bergamot", "Nutmeg"],
+        "heart": ["Turkish rose", "Peony", "Musk", "Petalia", "Vanilla"],
+        "base": ["Cashmeran", "Incense", "Cedar", "Haitian vetiver"]
+      },
+      "sex": "Female",
+      "age_range": "25-45",
+      "season": "Spring, Summer",
+      "intensity": "Moderate",
+      "occasion": "Special Occasions",
+      "image": "/images/delina_de_marly_collection.png",
+      "link": "https://www.neimanmarcus.com/p/parfums-de-marly-delina-eau-de-parfum-2-5-oz-prod243450230?pimId=401205026145&utm_source=google_shopping&ecid=NMCS_GP_RL&gad_source=1&gclid=Cj0KCQjwv_m-BhC4ARIsAIqNeBun_zrfrKIRlr-aHimSCjKkZtr2lhtY_bnxyQrZQsgwqaYx_GKCODEaAk2AEALw_wcB&gclsrc=aw.ds"
+    },
+    {
+      "id": "029",
+      "name": "Alien",
+      "brand": "Mugler",
+      "description": "A mysterious and captivating white floral fragrance with jasmine sambac for a radiant and otherworldly presence.",
+      "scents": ["White floral", "Amber"],
+      "notes": {
+        "top": ["Jasmine sambar"],
+        "heart": ["Cashmeran"],
+        "base": ["Amber"]
+      },
+      "sex": "Female",
+      "age_range": "25-45",
+      "season": "Fall, Winter",
+      "intensity": "Strong",
+      "occasion": "Evening, Special Occasions",
+      "image": "/images/alien_muggler_collection.png",
+      "link": "https://www.sephora.com/product/alien-P196516?country_switch=us&lang=en&skuId=1448026&om_mmc=ppc-GG_17234313526___1448026__9016969_c&country_switch=us&lang=en&gad_source=1&gclid=Cj0KCQjwv_m-BhC4ARIsAIqNeBvbNsQpw6goFO-bPBTwkEU2Z0L3Sz9wMTYkAX00xKWXFrOPMMc8o7waAj3DEALw_wcB&gclsrc=aw.ds"
+    },
+    {
+      "id": "030",
+      "name": "Black Opium Over Red",
+      "brand": "Yves Saint Laurent",
+      "description": "A seductive and addictive fragrance with coffee and vanilla notes for a modern and vibrant feminine allure.",
+      "scents": ["Cherry", "Vanilla", "Sweet", "White floral", "Coffee", "Warm spicy", "Citrus", "Patchouli", "Powdery", "Nutty"],
+      "notes": {
+        "top": ["Cherry", "Green mandarin"],
+        "heart": ["Jasmine", "Orange blossom", "Black tea"],
+        "base": ["Madagascar vanilla", "Coffee", "Indonesian patchouli leaf"]
+      },
+      "sex": "Female",
+      "age_range": "20-40",
+      "season": "Fall, Winter",
+      "intensity": "Strong",
+      "occasion": "Evening",
+      "image": "/images/black_opium_over_red_collection.png",
+      "link": "https://www.neimanmarcus.com/p/saint-laurent-black-opium-eau-de-parfum-over-red-3-oz-prod270310327?pimId=401238657859&utm_source=google_shopping&ecid=NMCS_GP_RL&gad_source=1&gclid=Cj0KCQjwv_m-BhC4ARIsAIqNeBu56sdV7fw2FSlUKNgFcIxjYTxhEa_u2Z-jDXp1wq94WaAOsaziL6gaAqdKEALw_wcB&gclsrc=aw.ds"
+    },
+    {
+      "id": "031",
+      "name": "Crystal Noir",
+      "brand": "Versace",
+      "description": "A mysterious and sensual oriental floral fragrance with coconut and gardenia for an exotic feminine allure.",
+      "scents": ["Fresh spicy", "Warm spicy", "White floral", "Coconut", "Laconic", "Woody", "Powdery", "Sweet", "Fresh", "Aromatic"],
+      "notes": {
+        "top": ["Pepper", "Ginger", "Cardamom"],
+        "heart": ["Coconut", "Gardenia", "Orange blossom", "Peony"],
+        "base": ["Sandalwood", "Musk", "Amber"]
+      },
+      "sex": "Female",
+      "age_range": "25-45",
+      "season": "Evening, Special Occasions",
+      "intensity": "Moderate",
+      "occasion": "Evening, Special Occasions",
+      "image": "/images/crystal_noir_collection.png",
+      "link": "https://www.sephora.com/product/crystal-noir-P307000?country_switch=us&lang=en&skuId=1406586&om_mmc=ppc-GG_17234313526___1406586__9016969_c&country_switch=us&lang=en&gad_source=1&gclid=Cj0KCQjwv_m-BhC4ARIsAIqNeBsRwLdoGCQeHgu5ounqYpaiejoU08ot0ZYNpynJWgjent-ttAS--lsaAsDkEALw_wcB&gclsrc=aw.ds"
+    },
+    {
+      "id": "032",
+      "name": "Coco Mademoiselle",
+      "brand": "Chanel",
+      "description": "An elegant and sophisticated fragrance with citrus and patchouli for a timeless feminine charm.",
+      "scents": ["Citrus", "Woody", "Patchouli", "Sweet", "White floral", "Rose", "Earthy", "Vanilla", "Warm spicy", "Yellow floral"],
+      "notes": {
+        "top": ["Orange", "Mandarin orange", "Bergamot", "Orange blossom"],
+        "heart": ["Turkish rose", "Jasmine", "Mimosa", "Ylang-ylang"],
+        "base": ["Patchouli", "White musk", "Vanilla", "Venter", "Tonka bean", "Opoponax"]
+      },
+      "sex": "Female",
+      "age_range": "25-45",
+      "season": "All Seasons",
+      "intensity": "Moderate",
+      "occasion": "All Day",
+      "image": "/images/coco_mademoiselle_collection.png",
+      "link": "https://www.sephora.com/product/coco-mademoiselle-P12495?country_switch=us&lang=en&skuId=513176&om_mmc=ppc-GG_17791296865___513176__9016969_c&country_switch=us&lang=en&gad_source=1&gclid=Cj0KCQjwv_m-BhC4ARIsAIqNeBueTIMvPIgaVbQGKbSwzCCLXwo9zh7HoVn5HAE0WQv2sVd0YXb4i8EaAteUEALw_wcB&gclsrc=aw.ds"
+    },
+    {
+      "id": "033",
+      "name": "Eilish",
+      "brand": "Billie Eilish",
+      "description": "A warm and gourmand fragrance with vanilla, cocoa, and spicy notes for a cozy and youthful embrace.",
+      "scents": ["Vanilla", "Sweet", "Warm spicy", "Cacao", "Powdery", "Amber"],
+      "notes": {
+        "top": ["Sugar", "Red berries", "Mandarin orange"],
+        "heart": ["Vanilla", "Cacao", "Spicy notes", "Rose"],
+        "base": ["Tonka bean", "Amber", "Musk", "Woody notes"]
+      },
+      "sex": "Female",
+      "age_range": "18-30",
+      "season": "Fall, Winter",
+      "intensity": "Moderate",
+      "occasion": "Daytime, Evening",
+      "image": "/images/eilish_collection.png",
+      "link": "https://www.ulta.com/p/eilish-eau-de-parfum-pimprod2030620?sku=2594570&cmpid=PS_Non!google!Product_Listing_Ads&utm_source=google&utm_medium=paidsearch&cagpspn=pla&CATCI=&CAAGID=&CAWELAID=330000200002852680&gad_source=1&gclid=Cj0KCQjwv_m-BhC4ARIsAIqNeBu9FqJt3WPFQqsheswfAXVnhYezuGOeABXa0q9NvgVR0h1QBgHiOLgaAh1LEALw_wcB"
+    },
+    {
+      "id": "034",
+      "name": "La Belle",
+      "brand": "Jean Paul Gaultier",
+      "description": "A sensual and fruity fragrance with pear and vanilla for a modern and seductive femininity.",
+      "scents": ["Vanilla", "Fruity", "Sweet", "Powdery", "Aquatic", "Aromatic", "Woody", "Amber", "Fresh", "Floral"],
+      "notes": {
+        "top": ["Pear", "Bergamot"],
+        "heart": ["Floral notes", "Leather"],
+        "base": ["Vanilla", "Vetiver", "Amber", "Musk"]
+      },
+      "sex": "Female",
+      "age_range": "20-40",
+      "season": "Spring, Summer, Fall",
+      "intensity": "Moderate",
+      "occasion": "Evening, Special Occasions",
+      "image": "/images/la_belle_collection.png",
+      "link": "https://www.ulta.com/p/la-belle-eau-de-parfum-pimprod2034073?sku=2600990&cmpid=PS_Non!google!Product_Listing_Ads&utm_source=google&utm_medium=paidsearch&cagpspn=pla&CATCI=&CAAGID=&CAWELAID=330000200002895046&gad_source=1&gclid=Cj0KCQjwv_m-BhC4ARIsAIqNeBtiD4w03TM2gra_m2vv8-64pKIaUqhnDwhYpoGfuS83Um9lxg24QRMaAtUqEALw_wcB"
+    },
+    {
+      "id": "035",
+      "name": "J'adore",
+      "brand": "Dior",
+      "description": "A luxurious and elegant floral fragrance with jasmine and rose for timeless feminine beauty.",
+      "scents": ["White floral", "Floral", "Fruity", "Sweet", "Fresh", "Aquatic", "Citrus", "Powdery", "Ozonic", "Tuberose"],
+      "notes": {
+        "top": ["Pear", "Melon", "Magnolia", "Peach", "Mandarin orange", "Bergamot"],
+        "heart": ["Jasmine", "Lily of the valley", "Tuberose", "Freesia", "Rose", "Orchid", "Plum", "Violet"],
+        "base": ["Musk", "Vanilla", "Cedar", "Blackberry"]
+      },
+      "sex": "Female",
+      "age_range": "25-50",
+      "season": "Spring, Summer",
+      "intensity": "Moderate",
+      "occasion": "Daytime, Special Occasions",
+      "image": "/images/jadore_dior_collection.png",
+      "link": "https://www.sephora.com/product/j-adore-eau-de-parfum-P6430"
+    },
+    {
+      "id": "036",
+      "name": "My Way",
+      "brand": "Giorgio Armani",
+      "description": "A bright and sophisticated floral fragrance with orange blossom and vanilla for a contemporary journey of self-discovery.",
+      "scents": ["White floral", "Tuberose", "Citrus", "Animalic", "Vanilla"],
+      "notes": {
+        "top": ["Orange blossom", "Bergamot"],
+        "heart": ["Tuberose", "Indian jasmine"],
+        "base": ["Madagascar vanilla", "White musk", "Virginian cedar"]
+      },
+      "sex": "Female",
+      "age_range": "20-40",
+      "season": "Spring, Summer",
+      "intensity": "Moderate",
+      "occasion": "Daytime",
+      "image": "/images/my_way_collection.png",
+      "link": "https://www.sephora.com/product/giorgio-armani-beauty-my-way-eau-de-parfum-P461420?country_switch=us&lang=en&skuId=2372688&om_mmc=ppc-GG_17791296865___2372688__9016969_c&country_switch=us&lang=en&gad_source=1&gclid=Cj0KCQjwv_m-BhC4ARIsAIqNeBunOHxFIf06yHkAlafjob6dc89raVt0LchqNdvr6tkRHQX7VqkyR_caAswYEALw_wcB&gclsrc=aw.ds"
+    },
+    {
+      "id": "037",
+      "name": "Idôle",
+      "brand": "Lancôme",
+      "description": "A clean and modern floral fragrance with rose and jasmine for a confident and inspiring feminine statement.",
+      "scents": ["Rose", "Musky", "Fruity", "Sweet", "White floral", "Powdery", "Floral", "Citrus", "Aquatic", "Vanilla"],
+      "notes": {
+        "top": ["Pear", "Bergamot", "Pink pepper"],
+        "heart": ["Rose", "Jasmine"],
+        "base": ["White musk", "Vanilla", "Patchouli", "Cedar"]
+      },
+      "sex": "Female",
+      "age_range": "18-35",
+      "season": "Spring, Summer",
+      "intensity": "Light",
+      "occasion": "Daytime",
+      "image": "/images/idole_collection.png",
+      "link": "https://www.sephora.com/product/idole-P448111?country_switch=us&lang=en&skuId=2249621&om_mmc=ppc-GG_17234313526___2249621__9016969_c&country_switch=us&lang=en&gad_source=1&gclid=Cj0KCQjwv_m-BhC4ARIsAIqNeBvtghlP60-MDueXzgiMo4pvOyYexDQGcajpvR7qwEXTelDsCTmMAW4aAlgpEALw_wcB&gclsrc=aw.ds"
+    },
+    {
+      "id": "038",
+      "name": "Chance Eau Trandre",
+      "brand": "Chanel",
+      "description": "A delicate and feminine fruity-floral fragrance with jasmine and grapefruit for a youthful and joyful elegance.",
+      "scents": ["Floral", "Fruity", "Citrus", "Sweet", "Fresh spicy", "Powdery", "White floral", "Musky", "Green", "Iris"],
+      "notes": {
+        "top": ["Quince", "Grapefruit"],
+        "heart": ["Hyacinth", "Jasmine"],
+        "base": ["Musk", "Iris", "Virgina cedar", "Amber"]
+      },
+      "sex": "Female",
+      "age_range": "20-40",
+      "season": "Spring, Summer",
+      "intensity": "Light",
+      "occasion": "Daytime",
+      "image": "/images/chance_eau_tendre_collection.png",
+      "link": "https://www.sephora.com/product/chance-eau-tendre-eau-de-parfum-P440093?country_switch=us&lang=en&skuId=2170686&om_mmc=ppc-GG_17791296865___2170686__9016969_c&country_switch=us&lang=en&gad_source=1&gclid=Cj0KCQjwv_m-BhC4ARIsAIqNeBuL-R62ddyzcVR7xQpkogoleuXzmklmUJHpFmu3XXEoujv0VNYSouUaAhYxEALw_wcB&gclsrc=aw.ds"
+    },
+    {
+      "id": "039",
+      "name": "Blanche",
+      "brand": "Byredo",
+      "description": "A clean and powdery fragrance inspired by the color white with aldehydes and musk for a pure, minimalist statement.",
+      "scents": ["Fresh", "Aldehydic", "Musky", "Powdery", "Floral", "Rose", "Violet", "Woody", "Soapy", "White floral"],
+      "notes": {
+        "top": ["Aldehydes", "Rose", "Pink pepper"],
+        "heart": ["Peony", "Violet", "African orange flower"],
+        "base": ["Musk", "Woodsy notes", "Sandalwood"]
+      },
+      "sex": "Female",
+      "age_range": "25-45",
+      "season": "Spring, Summer",
+      "intensity": "Light",
+      "occasion": "Daytime",
+      "image": "/images/blanche_byredo.png",
+      "link": "https://www.neimanmarcus.com/p/byredo-blanche-eau-de-parfum-3-4-oz-prod172090495?pimId=401008471831&utm_source=google_shopping&ecid=NMCS_GP_RL&gad_source=1&gclid=Cj0KCQjwv_m-BhC4ARIsAIqNeBs-uVVXlWwzSukLPsXUwIIUQ-cwSb9KYoinhqR1HejNKZhBUQxAhU0aAlAjEALw_wcB&gclsrc=aw.d"
+    },
+    {
+      "id": "040",
+      "name": "Si",
+      "brand": "Giorgio Armani",
+      "description": "A modern chypre fragrance with blackcurrant and vanilla for a feminine balance of strength and elegance.",
+      "scents": ["Woody", "Vanilla", "Aromatic", "Soft spicy", "Fruity", "Green", "Floral", "Patchouli", "Rose", "Earthy"],
+      "notes": {
+        "top": ["Cassis"],
+        "heart": ["May rose", "Freesia"],
+        "base": ["Vanilla", "Patchouli", "Woody notes", "Ambroxan"]
+      },
+      "sex": "Female",
+      "age_range": "25-45",
+      "season": "Fall, Winter",
+      "intensity": "Moderate",
+      "occasion": "All Day",
+      "image": "/images/si_armani_collection.png",
+      "link": "https://www.sephora.com/product/si-eau-de-parfum-P388029?country_switch=us&lang=en&skuId=1610864&om_mmc=ppc-GG_17234313526___1610864__9016969_c&country_switch=us&lang=en&gad_source=1&gclid=Cj0KCQjwv_m-BhC4ARIsAIqNeBtjSl9BqtG1Tgf1OZt1j8SjlHBm7DQDRTADLzmVZxBnfBD4LkSBjn8aApdLEALw_wcB&gclsrc=aw.ds"
+    },
+    {
+      "id": "041",
+      "name": "Libre Le Parfum",
+      "brand": "Yves Saint Laurent",
+      "description": "A warm and sensual fragrance with honey and vanilla for a modern and bold expression of freedom.",
+      "scents": ["Vanilla", "Sweet", "Citrus", "Honey", "White floral", "Lavender", "Fresh spicy", "Aromatic", "Warm spicy", "Floral"],
+      "notes": {
+        "top": ["Ginger", "Saffron", "Mandarin orange", "Bergamot"],
+        "heart": ["Orange blossom", "Lavender"],
+        "base": ["Bourbon vanilla", "Honey", "Tonka beam", "Vetiver"]
+      },
+      "sex": "Female",
+      "age_range": "25-45",
+      "season": "Fall, Winter",
+      "intensity": "Strong",
+      "occasion": "Evening",
+      "image": "/images/libre_la_parfum_collection.png",
+      "link": "https://www.sephora.com/product/libre-le-parfum-P501791?country_switch=us&lang=en&skuId=2590958&om_mmc=ppc-GG_17791296865___2590958__9016969_c&country_switch=us&lang=en&gad_source=1&gclid=Cj0KCQjwv_m-BhC4ARIsAIqNeBv2cLfhSMyO4PVZwBtYTO3jvdfPhiobhcXp2O5IAJMRpY4293xTe1EaAonXEALw_wcB&gclsrc=aw.ds"
+    },
+    {
+      "id": "042",
+      "name": "Mon Paris",
+      "brand": "Yves Saint Laurent",
+      "description": "A sparkling and fruity chypre fragrance with berries and patchouli for a modern interpretation of Parisian romance.",
+      "scents": ["Fruity", "Sweet", "Fresh", "Patchouli", "White floral", "Citrus", "Woody", "Floral", "Musky"],
+      "notes": {
+        "top": ["Strawberry", "Raspberry", "Pear", "Orange", "Tangerine", "Calabrian bergamot", "Clone"],
+        "heart": ["Peony", "Jasmine sambar", "Chinese jasmine", "Datura", "Orange blossom"],
+        "base": ["Indonesian patchouli", "Leaf patchouli", "White musk", "Vanilla", "Ambroxan", "Moss", "Cedar"]
+      },
+      "sex": "Female",
+      "age_range": "20-40",
+      "season": "Spring, Summer",
+      "intensity": "Moderate",
+      "occasion": "Daytime, Evening",
+      "image": "/images/mon_paris_collection.png",
+      "link": "https://www.sephora.com/product/mon-paris-eau-de-parfum-P410181?skuId=1838861&icid2=products+grid:p410181:product&gQT=2"
+    },
+    {
+      "id": "043",
+      "name": "Irresistible Givenchy",
+      "brand": "Givenchy",
+      "description": "A vibrant and feminine floral woody fragrance with rose and musk for a joyful and irresistible allure.",
+      "scents": ["Musky", "Rose", "Fruity", "Powdery", "Floral", "Sweet", "Iris", "Aquatic", "Woody", "Fresh"],
+      "notes": {
+        "top": ["Pear", "Ambrette"],
+        "heart": ["Rose", "Iris"],
+        "base": ["Musk", "Virginia cedar"]
+      },
+      "sex": "Female",
+      "age_range": "25-40",
+      "season": "Spring, Summer",
+      "intensity": "Moderate",
+      "occasion": "Daytime",
+      "image": "/images/irrestible_givenchy_collection.png",
+      "link": "https://www.neimanmarcus.com/p/givenchy-irresistible-eau-de-parfum-jumbo-4-2-oz-prod260080270?pimId=401228095456&utm_source=google_shopping&ecid=NMCS_GL_RL&gad_source=1&gclid=Cj0KCQjwv_m-BhC4ARIsAIqNeBvgcjKgrx3nZddBKJ2PXZGIZEeA0Ffhwpf8pAPeaTNSiE1xzO1hG74aAqmoEALw_wcB&gclsrc=aw.ds"
+    },
+    {
+      "id": "044",
+      "name": "Miss Dior Eau de Parfum",
+      "brand": "Dior",
+      "description": "A romantic and sophisticated floral fragrance with rose and vanilla for a timeless expression of love.",
+      "scents": ["Vanilla", "Powdery", "Rose", "Floral", "Fruity", "Sweet", "Fresh", "Iris", "Musky", "Amber"],
+      "notes": {
+        "top": ["Iris", "Peony", "Lily of the valley"],
+        "heart": ["Apricot", "Rose", "Peach"],
+        "base": ["Vanilla", "Musk", "Tonka bean", "Benzoin", "Sandalwood"]
+      },
+      "sex": "Female",
+      "age_range": "20-45",
+      "season": "Spring, Summer",
+      "intensity": "Moderate",
+      "occasion": "Daytime, Special Occasions",
+      "image": "/images/miss_dior_parfum_collection.png",
+      "link": "https://www.sephora.com/product/dior-miss-dior-eau-de-parfum-P474316?country_switch=us&lang=en&skuId=2467371&om_mmc=ppc-GG_17791296865___2467371__9016969_c&country_switch=us&lang=en&gad_source=1&gclid=Cj0KCQjwv_m-BhC4ARIsAIqNeBvDWegvXvpxN6-6HVN3-3UGEBCBQJXcJ1Ac57fVENozDRknNi5Ig0MaAlflEALw_wcB&gclsrc=aw.ds"
+    },
+    {
+      "id": "045",
+      "name": "English Pear & Freesia",
+      "brand": "Jo Malone London",
+      "description": "A delicate and fresh fruity floral fragrance with pear and freesia for an elegant and understated sophistication.",
+      "scents": ["Floral", "Fruity", "Sweet", "Rose", "Aquatic", "Musky", "Fresh", "Patchouli", "Green", "Powdery"],
+      "notes": {
+        "top": ["Pear", "Melon"],
+        "heart": ["Freesia", "Rose"],
+        "base": ["Musk", "Patchouli", "Rhubarb", "Amber"]
+      },
+      "sex": "Female",
+      "age_range": "25-50",
+      "season": "Spring, Summer",
+      "intensity": "Light",
+      "occasion": "Daytime",
+      "image": "/images/english_pear_collection.png",
+      "link": "https://www.sephora.com/product/english-pear-freesia-cologne-P417180?skuId=2677987"
+    },
+    {
+      "id": "046",
+      "name": "Prada Candy",
+      "brand": "Prada",
+      "description": "A playful and gourmand fragrance with caramel and benzoin for a sweet and feminine indulgence.",
+      "scents": ["Caramel", "Powdery", "Amber", "Sweet", "Vanilla", "Musky", "Warm spicy", "Balsamic"],
+      "notes": {
+        "top": ["Caramel"],
+        "heart": ["Powdery notes", "Musk"],
+        "base": ["Benzoin", "Vanilla"]
+      },
+      "sex": "Female",
+      "age_range": "18-35",
+      "season": "Fall, Winter",
+      "intensity": "Moderate",
+      "occasion": "Evening",
+      "image": "/images/prada_candy_collection.png",
+      "link": "https://www.sephora.com/product/candy-P376127?country_switch=us&lang=en&skuId=1361930&om_mmc=ppc-GG_17791296865___1361930__9016969_c&country_switch=us&lang=en&gad_source=1&gclid=Cj0KCQjwv_m-BhC4ARIsAIqNeBu62PeirbtXV3NXO5n89VOXV99Qr3fJLxoiSpbd0PyGYOr-dU0iP2EaAl9TEALw_wcB&gclsrc=aw.ds"
+    },
+    {
+      "id": "047",
+      "name": "Gucci bloom",
+      "brand": "Gucci",
+      "description": "A rich and intense white floral fragrance with tuberose and jasmine for a lush and blossoming femininity.",
+      "scents": ["White floral", "Tuberose"],
+      "notes": {
+        "top": ["Jasmine"],
+        "heart": ["Tuberose"],
+        "base": ["Rangoon creeper"]
+      },
+      "sex": "Female",
+      "age_range": "25-45",
+      "season": "Spring, Summer",
+      "intensity": "Moderate",
+      "occasion": "Daytime, Special Occasions",
+      "image": "/images/gucci_bloom_collection.png",
+      "link": "https://www.sephora.com/product/bloom-eau-de-parfum-for-her-P422093?country_switch=us&lang=en&skuId=1964832&om_mmc=ppc-GG_17791296865___1964832__9016969_c&country_switch=us&lang=en&gad_source=1&gclid=Cj0KCQjwv_m-BhC4ARIsAIqNeBtxd-OHw3m2Yz8QxNu3fU2BPF9lM5FgWowmOP1crxijwOR1iL_WhvoaAsh7EALw_wcB&gclsrc=aw.ds"
+    },
+    {
+      "id": "048",
+      "name": "Flora Gorgeous Orchid",
+      "brand": "Gucci",
+      "description": "A vibrant and luminous floral fragrance with vanilla orchid for a contemporary and sophisticated femininity.",
+      "scents": ["Vanilla", "Ozonic", "Floral", "Powdery", "Sweet"],
+      "notes": {
+        "top": ["Vanilla"],
+        "heart": ["Vanilla orchid"],
+        "base": ["Ozonic notes"]
+      },
+      "sex": "Female",
+      "age_range": "20-40",
+      "season": "Spring, Summer",
+      "intensity": "Moderate",
+      "occasion": "Daytime, Evening",
+      "image": "/images/flora_gorgeous_collection.png",
+      "link": "https://www.sephora.com/product/gucci-flora-gorgeous-orchid-eau-de-parfum-P511924?country_switch=us&lang=en&skuId=2788149&om_mmc=ppc-GG_17791296865___2788149__9016969_c&country_switch=us&lang=en&gad_source=1&gclid=Cj0KCQjwv_m-BhC4ARIsAIqNeBvPRhsQLoNjiwQuE4kk4hchoj4R3cC3fCLSj6a9XqWRLiH8QLYrvZcaArq2EALw_wcB&gclsrc=aw.ds"
+    },
+    {
+      "id": "049",
+      "name": "Devotion intense",
+      "brand": "Dolce & Gabbana",
+      "description": "A warm and sweet fragrance with hazelnut and vanilla for a rich and passionate Mediterranean embrace.",
+      "scents": ["Vanilla", "Nutty", "White floral", "Sweet", "Woody", "Citrus", "Powdery"],
+      "notes": {
+        "top": ["Hazelnut"],
+        "heart": ["Orange blossom"],
+        "base": ["Vanilla"]
+      },
+      "sex": "Female",
+      "age_range": "25-45",
+      "season": "Fall, Winter",
+      "intensity": "Strong",
+      "occasion": "Evening, Special Occasions",
+      "image": "/images/devotion_intense_collection.png",
+      "link": "https://www.sephora.com/product/devotion-eau-de-parfum-P508461?country_switch=us&lang=en&skuId=2703940&om_mmc=ppc-GG_17791296865___2703940__9016969_c&country_switch=us&lang=en&gad_source=1&gclid=Cj0KCQjwv_m-BhC4ARIsAIqNeBu7t19zK5l890WDEb4K-kS0Gxq0HSDIrAxP3FcR6I4ThenqgZd48hAaAvbpEALw_wcB&gclsrc=aw.ds"
+    },
+    {
+      "id": "050",
+      "name": "When the Rain Stops",
+      "brand": "Maison Martin Margiela",
+      "description": "A fresh and serene fragrance with aquatic notes and pine that captures the clean atmosphere after rainfall.",
+      "scents": ["Aquatic", "Woody", "Green", "Ozonic", "Rose", "Aromatic", "Mossy", "Earthy", "Fresh", "Citrus"],
+      "notes": {
+        "top": ["Green notes", "Bergamot", "Pink pepper"],
+        "heart": ["Watery notes", "Rain notes", "Turkish rose", "Jasmine"],
+        "base": ["Pine tree", "Moss", "Patchouli"]
+      },
+      "sex": "Female",
+      "age_range": "25-45",
+      "season": "Spring",
+      "intensity": "Light",
+      "occasion": "Daytime",
+      "image": "/images/rain_stops_collection.png",
+      "link": "https://www.sephora.com/product/maison-margiela-replica-when-rain-stops-P479498?country_switch=us&lang=en&skuId=2471514&om_mmc=ppc-GG_17791296865___2471514__9016969_c&country_switch=us&lang=en&gad_source=1&gclid=Cj0KCQjwv_m-BhC4ARIsAIqNeBurVr2mEt4RQ1UfJgxQqAgzXh-HCwmV0_XwKI4b_sUZlpj360Jh3uoaAk6KEALw_wcB&gclsrc=aw.ds"
+    },
+    {
+      "id": "051",
+      "name": "Scandal Le Parfum",
+      "brand": "Jean Paul Gaultier",
+      "description": "A sweet and indulgent fragrance with caramel and salty notes for a provocative and scandalous statement.",
+      "scents": ["Caramel", "Vanilla", "White floral", "Sweet", "Salty", "Powdery", "Balsamic"],
+      "notes": {
+        "top": ["Jasmine"],
+        "heart": ["Caramel", "Salt"],
+        "base": ["Vanilla"]
+      },
+      "sex": "Female",
+      "age_range": "25-40",
+      "season": "Fall, Winter",
+      "intensity": "Strong",
+      "occasion": "Evening, Special Occasions",
+      "image": "/images/scandal_collection.png",
+      "link": "https://www.jeanpaulgaultier.com/us/en_US/p/range-scandal/scandal-le-parfum-eau-de-parfum-intense-000000000065168248"
+    },
+    {
+      "id": "052",
+      "name": "Flowerbomb Tiger Lily",
+      "brand": "Viktor & Rolf",
+      "description": "An exotic and tropical fragrance with tiger lily and coconut milk for a vibrant and sunny escape.",
+      "scents": ["Tropical", "White floral", "Coconut", "Sweet", "Fruity", "Floral", "Amber", "Vanilla", "Laconic", "Terpenic"],
+      "notes": {
+        "top": ["Coconut milk", "Bergamot"],
+        "heart": ["Tiger lily", "Jasmine", "Freesia"],
+        "base": ["Mango", "Benzoin"]
+      },
+      "sex": "Female",
+      "age_range": "20-40",
+      "season": "Spring, Summer",
+      "intensity": "Moderate",
+      "occasion": "Daytime, Special Occasions",
+      "image": "/images/flowerbomb_tiger_lily_collection.png",
+      "link": "https://www.sephora.com/product/viktor-rolf-flowerbomb-tiger-lily-eau-de-parfum-P509800?country_switch=us&lang=en&skuId=2735553&om_mmc=ppc-GG_17791296865___2735553__9016969_c&country_switch=us&lang=en&gad_source=1&gclid=Cj0KCQjwv_m-BhC4ARIsAIqNeBteUTuhsG8AVh9YpamofDukd1cy7zK0oZFhRcIDAUR4DW8IgYodHC8aAlL9EALw_wcB&gclsrc=aw.ds"
+    },
+    {
+      "id": "053",
+      "name": "Herod",
+      "brand": "Parfums de Marly",
+      "description": "A rich and sophisticated tobacco vanilla fragrance with warm spices for a regal and opulent masculine presence.",
+      "scents": ["Tobacco", "Vanilla", "Warm spicy", "Cinnamon", "Sweet", "Amber", "Woody", "Musky", "Powdery", "Balsamic"],
+      "notes": {
+        "top": ["Cinnamon", "Pepperwood"],
+        "heart": ["Tobacco leaf", "Incense", "Osmanthus", "Labdanum"],
+        "base": ["Vanilla", "Iso E Super", "Cedar", "Musk", "Cypriot oil", "Vetiver"]
+      },
+      "sex": "Male",
+      "age_range": "30-50",
+      "season": "Fall, Winter",
+      "intensity": "Strong",
+      "occasion": "Evening, Special Occasions",
+      "image": "/images/global_herod_collection.png",
+      "link": "https://www.neimanmarcus.com/p/parfums-de-marly-herod-eau-de-parfum-4-2-oz-prod243450164?pimId=401205026060&utm_source=google_shopping&ecid=NMCS_GP_RL&gad_source=1&gclid=Cj0KCQjwv_m-BhC4ARIsAIqNeBsIxyPmq_-h7HfsS8emBWOfNrlFItmOhZKHdkI6yOCJyeNJ5nKqBWEaAqZGEALw_wcB&gclsrc=aw.ds"
+    },
+    {
+      "id": "054",
+      "name": "Side Effect",
+      "brand": "Initio Parfums Prives",
+      "description": "A decadent and addictive fragrance with tobacco and rum for a seductive and indulgent sensory journey.",
+      "scents": ["Warm spicy", "Tobacco", "Rum", "Cinnamon", "Woody", "Sweet"],
+      "notes": {
+        "top": ["Rum"],
+        "heart": ["Tobacco", "Cinnamon"],
+        "base": ["Saffron", "Sandalwood", "Hedion"]
+      },
+      "sex": "Unisex",
+      "age_range": "25-45",
+      "season": "Fall, Winter",
+      "intensity": "Strong",
+      "occasion": "Evening, Special Occasions",
+      "image": "/images/side_effect_collection.png",
+      "link": "https://www.neimanmarcus.com/p/initio-parfums-prives-side-effect-eau-de-parfum-3-04-oz-prod220090463?pimId=401094929374&utm_source=google_shopping&ecid=NMCS_GP_RL&gad_source=1&gclid=Cj0KCQjwv_m-BhC4ARIsAIqNeBuRUYVYpUbOK2y9NR_1m9M_iX5EYzI7XamAxHtpiC4Dvw_pDrmGGmoaAmi3EALw_wcB&gclsrc=aw.ds"
+    },
+    {
+      "id": "055",
+      "name": "Bad Boy Cobalt",
+      "brand": "Carolina Herrera",
+      "description": "A bold and contemporary fragrance with black pepper and vanilla for a mysterious and rebellious masculine edge.",
+      "scents": ["Fresh spicy", "Earthy", "Vanilla", "Woody", "Amber", "Aromatic", "Warm spicy", "Herbal", "Soft spicy", "Animalic"],
+      "notes": {
+        "top": ["Black pepper", "Sage"],
+        "heart": ["Truffle", "Woodsy notes"],
+        "base": ["Vanilla", "Frankincense"]
+      },
+      "sex": "Male",
+      "age_range": "20-40",
+      "season": "Fall, Winter",
+      "intensity": "Strong",
+      "occasion": "Evening",
+      "image": "/images/bad_boy_cobalt_collection.png",
+      "link": "https://www.sephora.com/product/carolina-herrera-bad-boy-cobalt-elixir-P510259?country_switch=us&lang=en&skuId=2748903&om_mmc=ppc-GG_17791296865___2748903__9016969_c&country_switch=us&lang=en&gad_source=1&gclid=Cj0KCQjwv_m-BhC4ARIsAIqNeBu-00SioAjuoANlZl4TtSg9r2-nd40z7ub-s-71ZCSKQyFeYgdwJQcaAuTmEALw_wcB&gclsrc=aw.ds"
+    },
+    {
+      "id": "056",
+      "name": "Sedley",
+      "brand": "Parfums de Marly",
+      "description": "A fresh and sophisticated citrus aromatic fragrance with mint and bergamot for an elegant and refined masculinity.",
+      "scents": ["Citrus", "Aromatic", "Fresh spicy", "Woody", "Amber", "Green", "Lavender", "Musky"],
+      "notes": {
+        "top": ["Lemon", "Mint", "Bergamot", "Grapefruit", "Mandarin orange"],
+        "heart": ["Lavender", "Rosemary", "Geranium", "Olibanum"],
+        "base": ["Ambroxan", "Sandalwood", "Cedar", "Vetiver", "Cashmeran", "Patchouli"]
+      },
+      "sex": "Unisex",
+      "age_range": "25-45",
+      "season": "Spring, Summer",
+      "intensity": "Moderate",
+      "occasion": "Daytime",
+      "image": "/images/sedley_de_marly_collections.png",
+      "link": "https://www.neimanmarcus.com/p/parfums-de-marly-4-2-oz-sedley-eau-de-parfum-prod243450253?pimId=401205025711&utm_source=google_shopping&ecid=NMCS_GP_RL&gad_source=1&gclid=Cj0KCQjwv_m-BhC4ARIsAIqNeBu78mVKEdJz7cMN94KmSYWyfBHJGCM1w62y4hynR_DrqQp6M24A0XMaAmxREALw_wcB&gclsrc=aw.ds"
+    },
+    {
+      "id": "057",
+      "name": "Jazz Club",
+      "brand": "Maison Martin Margiela",
+      "description": "A warm and boozy fragrance with tobacco and rum notes that evokes the atmosphere of a Brooklyn jazz club.",
+      "scents": ["Tobacco", "Sweet", "Rum", "Vanilla", "Woody", "Aromatic", "Soft spicy", "Amber", "Powdery", "Warm spicy"],
+      "notes": {
+        "top": ["Pink pepper", "Neroli", "Lemon"],
+        "heart": ["Rum", "Vetiver", "Clary sage"],
+        "base": ["Tobacco leaf", "Vanilla bean", "Styrax"]
+      },
+      "sex": "Male",
+      "age_range": "25-45",
+      "season": "Fall, Winter",
+      "intensity": "Moderate",
+      "occasion": "Evening",
+      "image": "/images/jazz_club_collection.png",
+      "link": "https://www.sephora.com/product/replica-jazz-club-P385350?country_switch=us&lang=en&skuId=1602259&om_mmc=ppc-GG_17791296865___1602259__9016969_c&country_switch=us&lang=en&gad_source=1&gclid=Cj0KCQjwv_m-BhC4ARIsAIqNeBuaytmr2zSeYsifFfCJRLZvJHZhu3U00AUxkOERLBq1hvMG_4MjGU8aAmU1EALw_wcB&gclsrc=aw.ds"
+    },
+    {
+      "id": "058",
+      "name": "Hawas for Him",
+      "brand": "Rasasi",
+      "description": "A fresh and aquatic fragrance with fruity notes and ambergris for a modern and confident masculine presence.",
+      "scents": ["Fruity", "Citrus", "Aquatic", "Fresh", "Warm spicy", "Amber", "Sweet", "Musky", "Animalic", "Aromatic"],
+      "notes": {
+        "top": ["Apple", "Bergamot", "Lemon", "Cinnamon"],
+        "heart": ["Watery notes", "Plum", "Cardamom", "Orange blossom"],
+        "base": ["Ambergris", "Musk", "Patchouli", "Driftwood"]
+      },
+      "sex": "Male",
+      "age_range": "20-40",
+      "season": "Spring, Summer",
+      "intensity": "Moderate",
+      "occasion": "Daytime",
+      "image": "/images/hawas_for_him_collection.png",
+      "link": "https://www.jomashop.com/rasasi-mens-hawas-edp-spray-3-4-oz-fragrances-614514331026.html?utm_source=google&utm_medium=cpc&utm_campaign=PMax%3A%20%28ROI%29%20NCA%20Smart%20Shopping%20-%20Fragrances%20Non-Best%20Sellers&utm_id=21105097127&utm_content=&utm_term=&gad_source=1&gclid=Cj0KCQjwv_m-BhC4ARIsAIqNeBtnel2azHKzSfm-l8k2oFrKBsBpz5527qKDye48wewrpx20b2jYCOsaAi9CEALw_wcB"
+    },
+    {
+      "id": "059",
+      "name": "Invictus Parfum",
+      "brand": "Rabanne",
+      "description": "A fresh and masculine fragrance with marine notes and musk for a powerful and victorious impression.",
+      "scents": ["Musky", "Aromatic", "Marine", "Soapy", "Powdery", "Woody", "Lavender", "Aquatic", "Ozonic", "Salty"],
+      "notes": {
+        "top": ["Marine notes", "Lavender", "Pink pepper"],
+        "heart": ["Soap", "Violet leaf", "Myrtle"],
+        "base": ["Musk", "Cashmeran", "Sandalwood"]
+      },
+      "sex": "Male",
+      "age_range": "20-40",
+      "season": "Spring, Summer",
+      "intensity": "Strong",
+      "occasion": "Daytime, Evening",
+      "image": "/images/invictus_parfum_collection.png",
+      "link": "https://www.sephora.com/product/paco-rabanne-invictus-parfum-P510922?country_switch=us&lang=en&skuId=2758183&om_mmc=ppc-GG_17791296865___2758183__9016969_c&country_switch=us&lang=en&gad_source=1&gclid=Cj0KCQjwv_m-BhC4ARIsAIqNeBuZkZXqjYyKfdS-neUxgLTiwZMp4dn1JroZ2zflhDoRkgPQj4XcJlAaAl7LEALw_wcB&gclsrc=aw.ds"
+    },
+    {
+      "id": "060",
+      "name": "Le Male Elixer",
+      "brand": "Jean Paul Gaultier",
+      "description": "A warm and indulgent fragrance with honey and vanilla for a sensual and addictive masculine allure.",
+      "scents": ["Vanilla", "Sweet", "Honey", "Amber", "Aromatic", "Lavender", "Tobacco", "Green", "Fresh spicy", "Powdery"],
+      "notes": {
+        "top": ["Lavender", "Mint"],
+        "heart": ["Vanilla", "Benzoin"],
+        "base": ["Honey", "Tonka bean", "Tobacco"]
+      },
+      "sex": "Male",
+      "age_range": "25-45",
+      "season": "Fall, Winter",
+      "intensity": "Strong",
+      "occasion": "Evening",
+      "image": "/images/le_male_collection.png",
+      "link": "https://www.sephora.com/product/jean-paul-gaultier-le-male-elixir-P510806?country_switch=us&lang=en&skuId=2775955&om_mmc=ppc-GG_17791296865___2775955__9016969_c&country_switch=us&lang=en&gad_source=1&gclid=Cj0KCQjwv_m-BhC4ARIsAIqNeBvAg0ig2H9rOFoH_o4mL6z96brjGD2qTY6hQgSbfpuv8Cadsx9tUcAaAlaWEALw_wcB&gclsrc=aw.ds"
+    },
+    {
+      "id": "061",
+      "name": "Interlude Man",
+      "brand": "Amouage",
+      "description": "A complex and chaotic amber fragrance with incense and smoke for a bold and artistic masculine statement.",
+      "scents": ["Amber", "Balsamic", "Fresh spicy", "Smoky", "Warm spicy", "Woody", "Oud"],
+      "notes": {
+        "top": ["Oregano", "Pepper", "Bergamot"],
+        "heart": ["Incense", "Opoponax", "Amber", "Labdanum"],
+        "base": ["Agarwood (Oud)", "Leather", "Sandalwood", "Patchouli"]
+      },
+      "sex": "Male",
+      "age_range": "30-55",
+      "season": "Fall, Winter",
+      "intensity": "Intense",
+      "occasion": "Special Occasions",
+      "image": "/images/interlude_man_collection.png",
+      "link": "https://www.neimanmarcus.com/p/amouage-interlude-man-eau-de-parfum-3-3-oz-prod229950141?pimId=401000060947&utm_source=google_shopping&ecid=NMCS_GP_RL&gad_source=1&gclid=Cj0KCQjwv_m-BhC4ARIsAIqNeBvoB_6-NIR09u_XITpl9ymZoK6LWNjrxVUpqRrJ6R2VZk9mugDrWj0aAuEaEALw_wcB&gclsrc=aw.ds"
+    },
+    {
+      "id": "062",
+      "name": "Born in Roma Green Stravaganza",
+      "brand": "Valentino",
+      "description": "A contemporary and vibrant fragrance with coffee and bergamot for an energetic and stylish Italian attitude.",
+      "scents": ["Citrus", "Coffee", "Aromatic", "Fresh spicy", "Woody", "Warm spicy", "Earthy", "Green"],
+      "notes": {
+        "top": ["Calabrian bergamot"],
+        "heart": ["Coffee"],
+        "base": ["Vetiver"]
+      },
+      "sex": "Male",
+      "age_range": "20-40",
+      "season": "Spring, Fall",
+      "intensity": "Moderate",
+      "occasion": "Daytime",
+      "image": "/images/roma_green_collection.png",
+      "link": "https://www.sephora.com/product/valentino-uomo-born-in-roma-green-stravaganza-eau-de-toilette-P510429?country_switch=us&lang=en&skuId=2736536&om_mmc=ppc-GG_17791296865___2736536__9016969_c&country_switch=us&lang=en&gad_source=1&gclid=Cj0KCQjwv_m-BhC4ARIsAIqNeBso3dOa1fDtZayu7RhUnq1TdCDrt19wI1h123HM3YqtYKejEevZl7QaAvfIEALw_wcB&gclsrc=aw.ds"
+    },
+    {
+      "id": "063",
+      "name": "Eros Flame",
+      "brand": "Versace",
+      "description": "A fiery and passionate fragrance with citrus and vanilla for a bold and seductive masculine statement.",
+      "scents": ["Citrus", "Vanilla", "Fresh spicy", "Aromatic", "Woody", "Warm spicy", "Sweet", "Powdery"],
+      "notes": {
+        "top": ["Mandarin orange", "Madagascar pepper", "Lemon", "Chinotto", "Rosemary"],
+        "heart": ["Geranium", "Rose", "Pepperwood"],
+        "base": ["Vanilla", "Tonka bean", "Sandalwood", "Texas cedar", "Patchouli", "Oak moss"]
+      },
+      "sex": "Male",
+      "age_range": "20-40",
+      "season": "Fall, Winter",
+      "intensity": "Strong",
+      "occasion": "Evening",
+      "image": "/images/eros_flame_collection.png",
+      "link": "https://www.sephora.com/product/eros-flame-P442726?country_switch=us&lang=en&skuId=2175214&om_mmc=ppc-GG_17791296865___2175214__9016969_c&country_switch=us&lang=en&gad_source=1&gclid=Cj0KCQjwv_m-BhC4ARIsAIqNeBsAw6rndFjQcEl4nFLyAQIIkKsjGY69JfZFe2HOcsjo-IWYosp1lK8aAigOEALw_wcB&gclsrc=aw.ds"
+    },
+    {
+      "id": "064",
+      "name": "The Most Wanted",
+      "brand": "Azzaro",
+      "description": "A warm and seductive fragrance with bourbon vanilla and ginger for a charismatic and magnetic masculine presence.",
+      "scents": ["Vanilla", "Woody", "Fresh spicy", "Powdery", "Fresh"],
+      "notes": {
+        "top": ["Ginger"],
+        "heart": ["Woodsy notes"],
+        "base": ["Bourbon vanilla"]
+      },
+      "sex": "Male",
+      "age_range": "25-40",
+      "season": "Fall, Winter",
+      "intensity": "Strong",
+      "occasion": "Evening",
+      "image": "/images/most_wanted_parfum_collection.png",
+      "link": "https://www.sephora.com/product/the-most-wanted-parfum-P503815?country_switch=us&lang=en&skuId=2651255&om_mmc=ppc-GG_17791296865___2651255__9016969_c&country_switch=us&lang=en&gad_source=1&gclid=Cj0KCQjwv_m-BhC4ARIsAIqNeBt5gBU6fCNNw0AnDD7lNQqLKyACnq8RoHFdUp-PgEdRqXyMGoAv4rwaAkTXEALw_wcB&gclsrc=aw.ds"
+    },
+    {
+      "id": "065",
+      "name": "L'Homme Intense",
+      "brand": "Prada",
+      "description": "A sophisticated and elegant fragrance with iris and leather for a refined and distinctive masculine elegance.",
+      "scents": ["Iris", "Powdery", "Amber", "Woody", "Earthy", "Leather", "Violet", "Vanilla", "Warm spicy", "Patchouli"],
+      "notes": {
+        "top": ["Iris"],
+        "heart": ["Amber", "Patchouli"],
+        "base": ["Tonka bean", "Leather", "Sandalwood"]
+      },
+      "sex": "Male",
+      "age_range": "30-50",
+      "season": "Fall, Winter",
+      "intensity": "Moderate",
+      "occasion": "Evening, Special Occasions",
+      "image": "/images/prada_intense_collection.png",
+      "link": "https://www.harrods.com/en-us/p/prada-beauty-lhomme-prada-intense-eau-de-toilette-100ml-000000000005739888?gad_source=1&gclid=Cj0KCQjwv_m-BhC4ARIsAIqNeBv4fr7Yutp9WitIrqVOz90Y5fu_rVeueFvDdve86EMX4zsC6YXyE6UaAtDjEALw_wcB&gclsrc=aw.ds"
+    },
+    {
+      "id": "066",
+      "name": "Luna Rossa Ocean",
+      "brand": "Prada",
+      "description": "A fresh and aromatic fragrance with lavender and iris for a modern and sophisticated masculine elegance.",
+      "scents": ["Aromatic", "Musky", "Powdery", "Lavender", "Herbal", "Citrus", "Fresh spicy", "Iris", "Woody", "Earthy"],
+      "notes": {
+        "top": ["Bergamot", "Pink pepper", "Artemisia"],
+        "heart": ["Lavender", "Iris", "Sage", "Suede", "Saffron"],
+        "base": ["Musk", "Caramel", "Haitian vetiver", "Patchouli"]
+      },
+      "sex": "Male",
+      "age_range": "25-45",
+      "season": "Spring, Summer",
+      "intensity": "Moderate",
+      "occasion": "Daytime",
+      "image": "/images/luna_rosse_collection.png",
+      "link": "https://www.sephora.com/product/luna-rossa-ocean-eau-de-parfum-P506036?country_switch=us&lang=en&skuId=2651081&om_mmc=ppc-GG_17791296865___2651081__9016969_c&country_switch=us&lang=en&gad_source=1&gclid=Cj0KCQjwv_m-BhC4ARIsAIqNeBuBq0YTy9m3CxTozoOKx5yios8mbWe6FqHQwNUbPFHiven0TUs4LoEaAq5BEALw_wcB&gclsrc=aw.ds"
+    },
+    {
+      "id": "067",
+      "name": "Elysium Pour Homme",
+      "brand": "Roja Parfums",
+      "description": "A luxurious and uplifting fragrance with citrus and woody notes for a sophisticated and heavenly masculine aura.",
+      "scents": ["Citrus", "Aromatic", "Woody", "Fresh spicy", "Green", "Amber", "Fruity", "Earthy", "Animalic"],
+      "notes": {
+        "top": ["Grapefruit", "Lemon", "Bergamot", "Lime", "Thyme", "Artemisia", "Galbanum"],
+        "heart": ["Vetiver", "Juniper berries", "Black currant", "Apple", "Pink pepper", "Cedar", "Cyproil oil", "Lily of the valley", "Rose", "Jasmine"],
+        "base": ["Ambergris", "Leather", "Vanilla", "Benzoin", "Labdanum"]
+      },
+      "sex": "Male",
+      "age_range": "30-55",
+      "season": "Spring, Summer",
+      "intensity": "Moderate",
+      "occasion": "Daytime, Special Occasions",
+      "image": "/images/pour_homme_collection.png",
+      "link": "https://www.bergdorfgoodman.com/p/roja-elysium-eau-de-parfum-3-4-oz-prod131060219?utm_source=google_shopping&ecid=BGCS_GP_CV_NC_PR_NONE&gad_source=1&gclid=Cj0KCQjwv_m-BhC4ARIsAIqNeBtIz0Nty1HfX82wydOolDbz5QaVQ-GgTdbSz0dFs6wEETVKYgsRb_QaAv82EALw_wcB&gclsrc=aw.ds"
+    },
+    {
+      "id": "068",
+      "name": "Khamrah",
+      "brand": "Lattafa",
+      "description": "A rich and indulgent fragrance with cinnamon and dates for an exotic and opulent oriental experience.",
+      "scents": ["Sweet", "Warm spicy", "Vanilla", "Amber", "Cinnamon", "Woody", "Fresh spicy", "Fruity"],
+      "notes": {
+        "top": ["Cinnamon", "Nutmeg", "Bergamot"],
+        "heart": ["Dates", "Praline", "Tuberose", "Mahonial"],
+        "base": ["Vanilla", "Tonka bean", "Amberwood", "Myrrh", "Benzoin", "Akigalawood"]
+      },
+      "sex": "Unisex",
+      "age_range": "25-45",
+      "season": "Fall, Winter",
+      "intensity": "Strong",
+      "occasion": "Evening, Special Occasions",
+      "image": "/images/lattafa.png",
+      "link": "https://lattafa-usa.com/products/lattafa-khamrah-eau-de-parfum-for-everyone?variant=48066574811437&country=US&currency=USD&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&gad_source=1&gclid=Cj0KCQjwv_m-BhC4ARIsAIqNeBsnZAj6L9SE-tjICDl67q1KYB15Gb3hK-DZbiHVWcJk3vrsWFfpatYaAiG3EALw_wcB"
+    },
+    {
+      "id": "069",
+      "name": "By the Fireplace",
+      "brand": "Maison Martin Margiela",
+      "description": "A warm and cozy fragrance with chestnuts and vanilla that evokes the comfort of a crackling fireplace in winter.",
+      "scents": ["Woody", "Vanilla", "Balsamic", "Warm spicy", "Amber", "Powdery", "Nutty", "Musky", "Soft spicy"],
+      "notes": {
+        "top": ["Cloves", "Pink pepper", "Orange blossom"],
+        "heart": ["Chestnut", "Guaiac wood", "Juniper"],
+        "base": ["Vanilla", "Peru balsam", "Cashmeran"]
+      },
+      "sex": "Unisex",
+      "age_range": "25-50",
+      "season": "Fall, Winter",
+      "intensity": "Moderate",
+      "occasion": "Evening",
+      "image": "/images/replica_firehouse_collection.png",
+      "link": "https://www.sephora.com/product/replica-by-fireplace-P404758?country_switch=us&lang=en&skuId=1788058&om_mmc=ppc-GG_17791296865___1788058__9016969_c&country_switch=us&lang=en&gad_source=1&gclid=Cj0KCQjwv_m-BhC4ARIsAIqNeBvpBSDe2gtP2ugQjWiWjuqSsAjwkjjEq6T8KJSs3C0T8STlwv69Z3oaAjoWEALw_wcB&gclsrc=aw.ds"
+    },
+    {
+      "id": "070",
+      "name": "Tobacco Vanille",
+      "brand": "Tom Ford",
+      "description": "A rich and opulent fragrance with tobacco leaf and vanilla for a warm and luxurious oriental experience.",
+      "scents": ["Vanilla", "Sweet", "Tobacco", "Warm spicy", "Fruity", "Woody", "Cacao", "Powdery"],
+      "notes": {
+        "top": ["Tobacco leaf", "Spicy notes"],
+        "heart": ["Vanilla", "Cacao", "Tonka bean", "Tobacco blossom"],
+        "base": ["Dried fruits", "Woody notes"]
+      },
+      "sex": "Unisex",
+      "age_range": "30-55",
+      "season": "Fall, Winter",
+      "intensity": "Strong",
+      "occasion": "Evening, Special Occasions",
+      "image": "/images/tom_ford_tobacco_collection.png",
+      "link": "https://www.sephora.com/product/tobacco-vanille-P393151?country_switch=us&lang=en&skuId=2038867&om_mmc=ppc-GG_17791296865___2038867__9016969_c&country_switch=us&lang=en&gad_source=1&gclid=Cj0KCQjwv_m-BhC4ARIsAIqNeBu4dgwWwsR5P68yotlHRQhiRZ8mK62brObuJJgS0i1bkhZ8aBivmAAaAhw4EALw_wcB&gclsrc=aw.ds"
+    },
+    {
+      "id": "071",
+      "name": "Ombré Leather",
+      "brand": "Tom Ford",
+      "description": "A rich and sensual fragrance with leather and jasmine for a sophisticated and addictive leathery statement.",
+      "scents": ["Leather", "Animalic", "Warm spicy", "White floral", "Amber", "Smoky", "Earthy", "Mossy", "Patchouli"],
+      "notes": {
+        "top": ["Cardamom"],
+        "heart": ["Leather", "Jasmine sambac"],
+        "base": ["Amber", "Moss", "Patchouli"]
+      },
+      "sex": "Unisex",
+      "age_range": "25-50",
+      "season": "Fall, Winter",
+      "intensity": "Strong",
+      "occasion": "Evening",
+      "image": "/images/ombre_leather_collection.png",
+      "link": "https://www.sephora.com/product/ombre-leather-P433663?country_switch=us&lang=en&skuId=2101327&om_mmc=ppc-GG_17791296865___2101327__9016969_c&country_switch=us&lang=en&gad_source=1&gclid=Cj0KCQjwv_m-BhC4ARIsAIqNeBtovINiT-rajxhmh65sCqliHXCR9JR74kl0NekWScdipcMZdtto-OUaAgUkEALw_wcB&gclsrc=aw.ds"
+    },
+    {
+      "id": "072",
+      "name": "Santal 33",
+      "brand": "Le Labo",
+      "description": "A distinctive and iconic woody fragrance with sandalwood and cardamom for a unique and addictive signature scent.",
+      "scents": ["Woody", "Powdery", "Leather", "Warm spicy", "Violet"],
+      "notes": {
+        "top": ["Sandalwood", "Leather", "Papyrus"],
+        "heart": ["Virginia cedar", "Cardamom", "Violet"],
+        "base": ["Iris", "Amber"]
+      },
+      "sex": "Unisex",
+      "age_range": "25-50",
+      "season": "All Seasons",
+      "intensity": "Moderate",
+      "occasion": "All Day",
+      "image": "/images/santal_33_collection.png",
+      "link": "https://www.saksfifthavenue.com/product/Le-Labo-Santal-33-Eau-de-Parfum-0400010736805.html?dwvar_0400010736805_size=3.4+oz&dwvar_0400010736805_color=NO+COLOR&site_refer=CSE_GGLPLA:Womens_Beauty:Le+Labo&country=US&currency=USD&CSE_CID=G_Saks_PLA_US_Beauty:All+Beauty&gad_source=1&gclid=Cj0KCQjwv_m-BhC4ARIsAIqNeBtCEO-uRDKAsXxMBHGhkGJig7tG2-l0QV5rMXytUsxclVdBPcxLuq8aAj0MEALw_wcB&gclsrc=aw.ds"
+    },
+    {
+      "id": "073",
+      "name": "Qaed Al Fursan",
+      "brand": "Lattafa",
+      "description": "A luxurious and powerful fragrance with pineapple and oud for an exotic and confident masculine presence.",
+      "scents": ["Fruity", "Sweet", "Woody", "Tropical", "Fresh", "Amber", "Warm spicy", "White floral", "Oud", "Metallic"],
+      "notes": {
+        "top": ["Pineapple", "Saffron"],
+        "heart": ["Balsam fir", "Jasmine"],
+        "base": ["Amber", "Cedar", "Agarwood (Oud)"]
+      },
+      "sex": "Unisex",
+      "age_range": "25-45",
+      "season": "Fall, Winter",
+      "intensity": "Strong",
+      "occasion": "Evening, Special Occasions",
+      "image": "/images/qaed_al_fursan_collection.png",
+      "link": "https://lattafa-usa.com/products/lattafa-qaed-al-fursan-eau-de-parfum-for-everyone?srsltid=AfmBOor9Wv03q1LPro1MlDwyzKvT2GNEYw563gNiBthrgUvZSEOyTdLJ"
+    },
+    {
+      "id": "074",
+      "name": "Vanilla 28",
+      "brand": "Kayali",
+      "description": "A sweet and cozy fragrance with vanilla and brown sugar for a comforting and indulgent personal experience.",
+      "scents": ["Amber", "Sweet", "Vanilla", "Woody", "Warm spicy", "Powdery", "Musky", "Floral", "Patchouli"],
+      "notes": {
+        "top": ["Vanilla orchid", "Jasmine"],
+        "heart": ["Brown sugar", "Tonka bean"],
+        "base": ["Amber", "Amber wood", "Musk", "Patchouli"]
+      },
+      "sex": "Unisex",
+      "age_range": "20-40",
+      "season": "Fall, Winter",
+      "intensity": "Moderate",
+      "occasion": "All Day",
+      "image": "/images/vanilla_28_collection.png",
+      "link": "https://www.sephora.com/product/kayali-vanilla-P439406"
+    },
+    {
+      "id": "075",
+      "name": "Red Tobacco",
+      "brand": "Mancera",
+      "description": "A bold and intense fragrance with tobacco and cinnamon for a powerful and distinctive masculine statement.",
+      "scents": ["Warm spicy", "Tobacco", "Woody", "Sweet", "Amber", "Vanilla", "Cinnamon", "Oud", "Powdery", "Fresh spicy"],
+      "notes": {
+        "top": ["Cinnamon", "Agarwood (Oud)", "Incense", "Saffron", "Nutmeg", "Green Apple", "White Pear"],
+        "heart": ["Patchouli", "Jasmine"],
+        "base": ["Tobacco", "Madagascar vanilla", "Amber", "Sandalwood", "Guaiac wood", "White musk", "Vetiver"]
+      },
+      "sex": "Unisex",
+      "age_range": "25-45",
+      "season": "Fall, Winter",
+      "intensity": "Intense",
+      "occasion": "Evening, Special Occasions",
+      "image": "/images/red_tobacco_collection.png",
+      "link": "https://manceraparfums.us/products/red-tobacco?srsltid=AfmBOoqKhpLAxca7SFITuoTsBpu8tgfL4WZmwizKWhqU2X_WCIM7BYVt"
+    }
+  ]
+}

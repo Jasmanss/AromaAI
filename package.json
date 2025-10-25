@@ -9,7 +9,7 @@
     "dev": "nodemon server.js",
     "flask": "python ml_server.py",
     "dev:all": "concurrently \"npm run dev\" \"npm run flask\"",
-    "build": "echo 'Building for production...' && cp -r public/* dist/ 2>/dev/null || mkdir -p dist && cp -r public/* dist/",
+    "build": "echo 'Building for production...' && mkdir -p dist && cp -r public/* dist/ && mkdir -p dist/data && cp data/fragrances.json dist/data/",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
